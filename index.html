@@ -45,6 +45,17 @@
       .console-main .quiz button{min-height:44px}
     }
     .interactive-scene{width:100%}
+
+    .stop-actions{display:grid;grid-template-columns:auto auto;align-items:center}
+    .next-destination{grid-column:1/-1;text-align:right;font-size:11px;letter-spacing:1px;color:#becdb5}
+    .maya-jump .warp i{animation-duration:.8s}
+    .travel.final-silence{background:#000}
+    .travel.final-silence .warp,.travel.final-silence .travel-core{visibility:hidden}
+    .arrival span{text-align:center;max-width:90%;font-size:clamp(22px,3vw,40px)}
+    .prediction-options button{padding:8px 13px}
+    @media(max-width:1000px){.stop-actions{grid-template-columns:1fr}.next-destination{grid-column:auto;text-align:center}}
+    @media(min-width:900px){.stop-bottom .prediction{max-width:63%}.stop-bottom .prediction>p,.stop-bottom .prediction>small{max-width:650px}}
+    @media(min-width:900px) and (max-height:850px){.stop-page .stop-heading h1{font-size:32px}.stop-page .interactive-scene{max-height:36vh;min-height:250px}.stop-heading p{line-height:1.4}.stop-bottom .prediction>p,.stop-bottom .prediction>small{font-size:13px;line-height:1.4}}
   </style>
 </head>
 <body>
@@ -72,10 +83,330 @@
 <template id="art-vikings"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Illustrated Viking harbour with a longship, timber longhouse and trader"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#93b9ba"></stop><stop offset="1" stop-color="#e7d8b0"></stop></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#567f7c"></stop><stop offset="1" stop-color="#243f42"></stop></linearGradient><linearGradient id="land" x2="0" y2="1"><stop stop-color="#7a8362"></stop><stop offset="1" stop-color="#394c3b"></stop></linearGradient><pattern id="roof" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" stroke="#b69a62" stroke-width="2"></path></pattern></defs><rect width="1200" height="600" fill="url(#sky)"></rect><circle cx="230" cy="120" r="62" fill="#fff0be" opacity=".7"></circle><path d="M0 280L180 145 295 242 415 155 600 300 790 190 940 245 1110 140 1200 225V600H0Z" fill="#678675" opacity=".45"></path><path d="M0 340Q240 210 450 310T880 265T1200 290V600H0Z" fill="url(#land)"></path><path d="M0 345Q280 365 710 425L750 600H0Z" fill="url(#water)"></path><path d="M10 395Q140 383 265 395T570 395" fill="none" stroke="#b2ccbb" stroke-width="3" opacity=".35"></path><path d="M10 430Q140 418 265 430T570 430" fill="none" stroke="#b2ccbb" stroke-width="3" opacity=".35"></path><path d="M10 480Q140 468 265 480T570 480" fill="none" stroke="#b2ccbb" stroke-width="3" opacity=".35"></path><path d="M10 530Q140 518 265 530T570 530" fill="none" stroke="#b2ccbb" stroke-width="3" opacity=".35"></path><path d="M510 400L850 485 820 520 480 432Z" fill="#6c5139"></path><path d="M540 424V565" stroke="#493d2e" stroke-width="12"></path><path d="M625 424V565" stroke="#493d2e" stroke-width="12"></path><path d="M710 424V565" stroke="#493d2e" stroke-width="12"></path><path d="M795 424V565" stroke="#493d2e" stroke-width="12"></path><g transform="translate(730 155)"><path d="M0 135L100 30 270 115 170 200Z" fill="#514536"></path><path d="M0 135V280L170 330V200Z" fill="#795d41"></path><path d="M170 200L270 115V260L170 330Z" fill="#65523b"></path><path d="M-25 130L100 5 305 110 180 225Z" fill="#ad915f"></path><path d="M-25 130L100 5 305 110 180 225Z" fill="url(#roof)"></path><path d="M65 180V298L110 310V193Z" fill="#352e26"></path><path d="M194 218L240 184V234L194 267Z" fill="#292d25"></path></g><g transform="translate(180 235)"><path d="M-25 185Q110 300 340 160L310 232Q120 330 0 238Z" fill="#74533b" stroke="#3e332a" stroke-width="7"></path><path d="M-20 192L-42 138-18 125 5 145M334 174L358 115 333 106 315 140" fill="none" stroke="#74533b" stroke-width="13"></path><path d="M148 10V250" stroke="#493f2e" stroke-width="9"></path><path d="M152 20L275 145H45Z" fill="#efe1bf"></path><path d="M80 145L152 20" stroke="#b5694f" stroke-width="20"></path><path d="M125 145L152 20" stroke="#b5694f" stroke-width="20"></path><path d="M170 145L152 20" stroke="#b5694f" stroke-width="20"></path><path d="M215 145L152 20" stroke="#b5694f" stroke-width="20"></path><circle cx="35" cy="232" r="17" fill="#b2884f" stroke="#493b2c" stroke-width="4"></circle><circle cx="80" cy="232" r="17" fill="#b2884f" stroke="#493b2c" stroke-width="4"></circle><circle cx="125" cy="232" r="17" fill="#b2884f" stroke="#493b2c" stroke-width="4"></circle><circle cx="170" cy="232" r="17" fill="#b2884f" stroke="#493b2c" stroke-width="4"></circle><circle cx="215" cy="232" r="17" fill="#b2884f" stroke="#493b2c" stroke-width="4"></circle><circle cx="260" cy="232" r="17" fill="#b2884f" stroke="#493b2c" stroke-width="4"></circle></g><g transform="translate(780 365)"><ellipse cy="145" rx="45" ry="9" fill="#253c30" opacity=".4"></ellipse><path d="M-20 45L-32 125H32L20 45Z" fill="#a37150"></path><circle cy="22" r="23" fill="#ba865e"></circle><path d="M-23 17Q0-22 24 17" fill="#3e372b"></path><path d="M-13 125L-16 152M14 125L20 152" stroke="#5b4433" stroke-width="10"></path><path d="M-22 53L-44 98M20 53L50 82" stroke="#ba865e" stroke-width="12"></path></g><rect width="1200" height="600" fill="#172d28" opacity=".08"></rect></svg></template>
 <template id="art-maya"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Illustrated early Maya farming settlement with thatched homes, maize, a farmer and a potter"><defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#ced2a1"></stop><stop offset="1" stop-color="#edc99a"></stop></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#567f7c"></stop><stop offset="1" stop-color="#243f42"></stop></linearGradient><linearGradient id="land" x2="0" y2="1"><stop stop-color="#5c7547"></stop><stop offset="1" stop-color="#394c3b"></stop></linearGradient><pattern id="roof" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" stroke="#b69a62" stroke-width="2"></path></pattern></defs><rect width="1200" height="600" fill="url(#sky)"></rect><circle cx="920" cy="120" r="62" fill="#fff0be" opacity=".7"></circle><path d="M0 280L180 145 295 242 415 155 600 300 790 190 940 245 1110 140 1200 225V600H0Z" fill="#678675" opacity=".45"></path><path d="M0 340Q240 210 450 310T880 265T1200 290V600H0Z" fill="url(#land)"></path><path d="M0 600Q340 420 530 440T1200 540" fill="none" stroke="#b19566" stroke-width="110"></path><g transform="translate(40,20)"><path d="M0 500Q35 300 25 75" stroke="#465037" stroke-width="24" fill="none"></path><g><path d="M25 75Q-75 0 -145 95Q-65 40 25 75" fill="#304f3b"></path><path d="M25 90Q-65 55 -115 170Q-50 95 25 90" fill="#456846"></path></g><g><path d="M25 75Q125 0 195 95Q115 40 25 75" fill="#304f3b"></path><path d="M25 90Q115 55 165 170Q100 95 25 90" fill="#456846"></path></g></g><g transform="translate(120,90)"><path d="M0 500Q35 300 25 75" stroke="#465037" stroke-width="24" fill="none"></path><g><path d="M25 75Q-75 0 -145 95Q-65 40 25 75" fill="#304f3b"></path><path d="M25 90Q-65 55 -115 170Q-50 95 25 90" fill="#456846"></path></g><g><path d="M25 75Q125 0 195 95Q115 40 25 75" fill="#304f3b"></path><path d="M25 90Q115 55 165 170Q100 95 25 90" fill="#456846"></path></g></g><g transform="translate(1030,20)"><path d="M0 500Q35 300 25 75" stroke="#465037" stroke-width="24" fill="none"></path><g><path d="M25 75Q-75 0 -145 95Q-65 40 25 75" fill="#304f3b"></path><path d="M25 90Q-65 55 -115 170Q-50 95 25 90" fill="#456846"></path></g><g><path d="M25 75Q125 0 195 95Q115 40 25 75" fill="#304f3b"></path><path d="M25 90Q115 55 165 170Q100 95 25 90" fill="#456846"></path></g></g><g transform="translate(1130,90)"><path d="M0 500Q35 300 25 75" stroke="#465037" stroke-width="24" fill="none"></path><g><path d="M25 75Q-75 0 -145 95Q-65 40 25 75" fill="#304f3b"></path><path d="M25 90Q-65 55 -115 170Q-50 95 25 90" fill="#456846"></path></g><g><path d="M25 75Q125 0 195 95Q115 40 25 75" fill="#304f3b"></path><path d="M25 90Q115 55 165 170Q100 95 25 90" fill="#456846"></path></g></g><g transform="translate(510 170)"><path d="M0 135L100 30 270 115 170 200Z" fill="#514536"></path><path d="M0 135V280L170 330V200Z" fill="#b39663"></path><path d="M170 200L270 115V260L170 330Z" fill="#65523b"></path><path d="M-25 130L100 5 305 110 180 225Z" fill="#ad915f"></path><path d="M-25 130L100 5 305 110 180 225Z" fill="url(#roof)"></path><path d="M65 180V298L110 310V193Z" fill="#352e26"></path><path d="M194 218L240 184V234L194 267Z" fill="#292d25"></path></g><g transform="translate(270 260) scale(.63)"><path d="M0 135L100 25 280 130 170 215Z" fill="#b69a64"></path><path d="M0 135V310L170 340V215Z" fill="#a78f69"></path><path d="M45 180V319H95V199Z" fill="#3a382a"></path></g><g transform="translate(110 370)"><path d="M0 150V0" stroke="#78924c" stroke-width="7"></path><path d="M0 100Q-65 70-45 35Q-10 60 0 90M0 70Q55 10 55 35Q40 70 0 100" fill="#5c8047"></path><ellipse cx="8" cy="70" rx="10" ry="25" fill="#d5b965"></ellipse></g><g transform="translate(150 405)"><path d="M0 150V0" stroke="#78924c" stroke-width="7"></path><path d="M0 100Q-65 70-45 35Q-10 60 0 90M0 70Q55 10 55 35Q40 70 0 100" fill="#5c8047"></path><ellipse cx="8" cy="70" rx="10" ry="25" fill="#d5b965"></ellipse></g><g transform="translate(195 370)"><path d="M0 150V0" stroke="#78924c" stroke-width="7"></path><path d="M0 100Q-65 70-45 35Q-10 60 0 90M0 70Q55 10 55 35Q40 70 0 100" fill="#5c8047"></path><ellipse cx="8" cy="70" rx="10" ry="25" fill="#d5b965"></ellipse></g><g transform="translate(235 405)"><path d="M0 150V0" stroke="#78924c" stroke-width="7"></path><path d="M0 100Q-65 70-45 35Q-10 60 0 90M0 70Q55 10 55 35Q40 70 0 100" fill="#5c8047"></path><ellipse cx="8" cy="70" rx="10" ry="25" fill="#d5b965"></ellipse></g><g transform="translate(340 355)"><ellipse cy="145" rx="45" ry="9" fill="#253c30" opacity=".4"></ellipse><path d="M-20 45L-32 125H32L20 45Z" fill="#ded0a5"></path><circle cy="22" r="23" fill="#ba865e"></circle><path d="M-23 17Q0-22 24 17" fill="#3e372b"></path><path d="M-13 125L-16 152M14 125L20 152" stroke="#5b4433" stroke-width="10"></path><path d="M-22 53L-44 98M20 53L50 82" stroke="#ba865e" stroke-width="12"></path></g><g transform="translate(855 395)"><circle cy="0" r="22" fill="#b27d55"></circle><path d="M-22-5Q0-35 24-3" fill="#343427"></path><path d="M-17 24L-43 100H45L20 24Z" fill="#b6764f"></path><path d="M-16 35L25 68" stroke="#b27d55" stroke-width="12"></path><ellipse cx="65" cy="90" rx="35" ry="14" fill="#b88a59"></ellipse><path d="M40 60Q30 100 65 110Q100 100 90 60Z" fill="#b57647"></path><ellipse cx="65" cy="60" rx="25" ry="8" fill="#654534"></ellipse></g><rect width="1200" height="600" fill="#172d28" opacity=".08"></rect></svg></template>
 
+<template id="art-present"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Present-day classroom with a learning board, pupil, tablet and a calendar marked Today"><defs><linearGradient id="present-sky" x2="0" y2="1"><stop stop-color="#9bb5b0"/><stop offset="1" stop-color="#e8d1a7"/></linearGradient><linearGradient id="present-ground" x2="0" y2="1"><stop stop-color="#8d9470"/><stop offset="1" stop-color="#586044"/></linearGradient><linearGradient id="present-stone" x2="0" y2="1"><stop stop-color="#d5c39e"/><stop offset="1" stop-color="#a99570"/></linearGradient><pattern id="present-thatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" fill="none" stroke="#cebb82" stroke-width="2" opacity=".6"/></pattern><pattern id="present-brick" width="44" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 24H44M22 0V12M0 12H44M0 12V24M44 12V24" stroke="#e1be9677" stroke-width="1.5" fill="none"/></pattern></defs><rect width="1200" height="600" fill="url(#present-sky)"/><rect y="95" width="1200" height="355" fill="#b9b49a"/><rect y="450" width="1200" height="150" fill="#8b825f"/><path d="M0 600L520 450M340 600L690 450M800 600L855 450M1200 575L1060 450" stroke="#b4a583" stroke-width="2"/><rect y="102" width="1200" height="16" fill="#dbd2b8"/>
+<rect x="70" y="185" width="335" height="233" rx="5" fill="#706746" stroke="#d4c4a0" stroke-width="14"/><rect x="86" y="200" width="303" height="200" fill="#345a51"/><path d="M110 244H286M110 262H325M110 280H250" stroke="#d0debd" stroke-width="6" stroke-linecap="round"/><circle cx="298" cy="344" r="36" fill="#73a29b"/><path d="M265 326L285 315 300 323 291 342 313 352 309 366 286 367 279 347Z" fill="#b8c680"/><path d="M298 380V405M270 408H327" stroke="#c3b494" stroke-width="8"/>
+<rect x="425" y="147" width="280" height="158" fill="#d8d0b0" stroke="#807a60" stroke-width="9"/><rect x="435" y="155" width="260" height="140" fill="#a9c5bc"/><path d="M438 275Q485 212 540 246T695 225V295H438Z" fill="#6e8c65"/><path d="M562 150V299M432 226H697" stroke="#e8d9b7" stroke-width="9"/>
+<rect x="916" y="133" width="182" height="157" rx="9" fill="#e8ddbd" stroke="#78806a" stroke-width="7"/><rect x="916" y="133" width="182" height="42" rx="7" fill="#8a6651"/><path d="M945 124V149M1070 124V149" stroke="#454e42" stroke-width="10" stroke-linecap="round"/><text x="1007" y="226" text-anchor="middle" font-family="sans-serif" font-size="27" font-weight="bold" fill="#344d44">TODAY</text><path d="M946 250H979M992 250H1025M1038 250H1071" stroke="#aaa58a" stroke-width="7"/>
+<rect x="47" y="412" width="368" height="18" rx="4" fill="#bf9b69"/><path d="M75 430V520M383 430V520" stroke="#55594a" stroke-width="13"/>
+<rect x="731" y="422" width="315" height="20" rx="4" fill="#c6a172"/><path d="M752 442V563M1019 442V563" stroke="#5d624d" stroke-width="13"/>
+<g transform="translate(769 305) rotate(6 73 55)"><rect width="150" height="110" rx="10" fill="#3a4544" stroke="#67726b" stroke-width="5"/><rect x="10" y="10" width="130" height="90" rx="3" fill="#82b1a0"/><circle cx="54" cy="54" r="23" fill="#d5deb2"/><path d="M89 37H125M89 51H118M89 66H127" stroke="#dde5c7" stroke-width="6"/></g>
+<g transform="translate(1080 376)"><rect y="55" width="58" height="58" rx="5" fill="#9d7253"/><path d="M28 64V-11M28 30Q-22 20-10-3Q20-10 28 30M28 12Q76-28 85-5Q66 20 28 23" stroke="#546f4d" stroke-width="6" fill="#789365"/></g><g transform="translate(529 244) scale(1.18)"><ellipse cx="0" cy="148" rx="37" ry="8" fill="#213c32" opacity=".25"/><path d="M-15 111L-18 146M15 111L20 146" stroke="#514836" stroke-width="12"/><path d="M-22 45L-29 118H30L22 45Z" fill="#78989b"/><path d="M-22 57L-38 103M22 57L39 99" stroke="#c7936e" stroke-width="12" stroke-linecap="round"/><circle cy="22" r="23" fill="#c7936e"/><path d="M-23 16Q-18-12 4-3Q26-1 24 20Q8 6-11 14Z" fill="#4b3b2d"/><rect x="-44" y="80" width="42" height="49" rx="3" fill="#bc845f"/><path d="M-27 147H-10M12 147H28" stroke="#353a30" stroke-width="8" stroke-linecap="round"/></g><rect width="1200" height="600" fill="#172d28" opacity=".075"/></svg></template>
+
+<template id="art-modern2017"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Modern street in 2017 with a baby in a pram, smartphone, car and dated calendar"><defs><linearGradient id="modern2017-sky" x2="0" y2="1"><stop stop-color="#9bb5b0"/><stop offset="1" stop-color="#e8d1a7"/></linearGradient><linearGradient id="modern2017-ground" x2="0" y2="1"><stop stop-color="#8d9470"/><stop offset="1" stop-color="#586044"/></linearGradient><linearGradient id="modern2017-stone" x2="0" y2="1"><stop stop-color="#d5c39e"/><stop offset="1" stop-color="#a99570"/></linearGradient><pattern id="modern2017-thatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" fill="none" stroke="#cebb82" stroke-width="2" opacity=".6"/></pattern><pattern id="modern2017-brick" width="44" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 24H44M22 0V12M0 12H44M0 12V24M44 12V24" stroke="#e1be9677" stroke-width="1.5" fill="none"/></pattern></defs><rect width="1200" height="600" fill="url(#modern2017-sky)"/><circle cx="165" cy="112" r="65" fill="#fff0be" opacity=".55"/><path d="M500 85Q535 47 577 81Q625 57 658 86H500M960 66Q997 30 1039 64Q1084 45 1110 70H960" fill="#f0e5c7" opacity=".35"/><path d="M0 297Q230 242 430 288T840 265T1200 280V600H0Z" fill="#7c9570"/><rect y="426" width="1200" height="174" fill="#626f63"/><path d="M0 457H1200" stroke="#d5c7a6" stroke-width="22"/><path d="M0 555H105M150 555H315M370 555H535M590 555H755M810 555H975M1030 555H1195" stroke="#d4cfb2" stroke-width="7"/>
+<g><rect x="45" y="223" width="260" height="184" fill="#b09271"/><path d="M24 235L174 115 326 235Z" fill="#68776a"/><rect x="45" y="223" width="260" height="184" fill="url(#modern2017-brick)"/><rect x="160" y="306" width="64" height="101" fill="#567163"/><g><rect x="80" y="268" width="45" height="66" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M102.5 268V334M80 301.0H125" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="237" y="268" width="45" height="66" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M259.5 268V334M237 301.0H282" stroke="#d6c3a0" stroke-width="4"/></g></g>
+<g><rect x="850" y="134" width="300" height="279" fill="#bdb292"/><path d="M828 145L1000 40 1172 145Z" fill="#577265"/><rect x="850" y="134" width="300" height="279" fill="url(#modern2017-brick)"/><rect x="878" y="273" width="56" height="140" fill="#536d62"/><g><rect x="960" y="295" width="60" height="62" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M990.0 295V357M960 326.0H1020" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="1060" y="295" width="55" height="62" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M1087.5 295V357M1060 326.0H1115" stroke="#d6c3a0" stroke-width="4"/></g><rect x="945" y="154" width="130" height="104" rx="5" fill="#e3d7b7" stroke="#727b63" stroke-width="5"/><rect x="945" y="154" width="130" height="26" rx="4" fill="#a47152"/><text x="1010" y="222" text-anchor="middle" font-family="sans-serif" font-size="32" font-weight="bold" fill="#3d5448">2017</text></g>
+<path d="M680 409L739 347H946L1008 401L1058 416V470H649V420Z" fill="#6b8986" stroke="#40594e" stroke-width="5"/><path d="M755 358L715 405H951L918 358Z" fill="#bbd2c1"/><path d="M832 356V407" stroke="#50685d" stroke-width="7"/><path d="M647 441H1056" stroke="#adc1ac" stroke-width="5"/><circle cx="733" cy="465" r="39" fill="#394a43"/><circle cx="733" cy="465" r="20" fill="#c7c3a7"/><circle cx="972" cy="465" r="39" fill="#394a43"/><circle cx="972" cy="465" r="20" fill="#c7c3a7"/><rect x="658" y="421" width="35" height="14" rx="5" fill="#ecdb9e"/><rect x="1009" y="421" width="33" height="14" rx="5" fill="#b08067"/>
+<g transform="translate(207 329)"><path d="M-43 85H56L76 25H-70Z" fill="#849685" stroke="#4b6054" stroke-width="7"/><path d="M-73 25Q-66-64-3-52Q56-45 76 25Z" fill="#c5b395"/><path d="M-34-30Q-4-71 30-33L39 12H-43Z" fill="#465f58"/><ellipse cx="1" cy="5" rx="39" ry="24" fill="#e7d8b7"/><circle cx="2" cy="-4" r="21" fill="#c79572"/><path d="M-53 83L-38 124M59 84L45 124M-83-1L-95-27H-117" stroke="#485950" stroke-width="8" fill="none"/><circle cx="-38" cy="131" r="22" fill="#3c4c43"/><circle cx="45" cy="131" r="22" fill="#3c4c43"/></g>
+<g transform="translate(482 198) rotate(-7 42 72)"><rect width="90" height="159" rx="15" fill="#3e504d" stroke="#7c8f7f" stroke-width="5"/><rect x="8" y="16" width="74" height="119" rx="7" fill="#9dc0ad"/><path d="M26 52H63M26 64H56" stroke="#e9e9ca" stroke-width="5"/><rect x="23" y="87" width="18" height="18" rx="4" fill="#bc9a70"/><rect x="49" y="87" width="18" height="18" rx="4" fill="#678674"/><circle cx="45" cy="146" r="5" fill="#b0bb9b"/></g>
+<g stroke="#536e51" stroke-width="13" fill="none"><path d="M402 359V215M1170 365V215"/></g><g fill="#6d8f64"><circle cx="402" cy="205" r="53"/><circle cx="1170" cy="211" r="64"/></g><rect width="1200" height="600" fill="#172d28" opacity=".075"/></svg></template>
+
+<template id="art-ww2"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="British street at the beginning of the Second World War with an evacuee child, radio, air raid warden and aircraft"><defs><linearGradient id="ww2-sky" x2="0" y2="1"><stop stop-color="#9eaaa0"/><stop offset="1" stop-color="#dac9a5"/></linearGradient><linearGradient id="ww2-ground" x2="0" y2="1"><stop stop-color="#928870"/><stop offset="1" stop-color="#586044"/></linearGradient><linearGradient id="ww2-stone" x2="0" y2="1"><stop stop-color="#d5c39e"/><stop offset="1" stop-color="#a99570"/></linearGradient><pattern id="ww2-thatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" fill="none" stroke="#cebb82" stroke-width="2" opacity=".6"/></pattern><pattern id="ww2-brick" width="44" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 24H44M22 0V12M0 12H44M0 12V24M44 12V24" stroke="#e1be9677" stroke-width="1.5" fill="none"/></pattern></defs><rect width="1200" height="600" fill="url(#ww2-sky)"/><circle cx="165" cy="112" r="65" fill="#fff0be" opacity=".55"/><path d="M500 85Q535 47 577 81Q625 57 658 86H500M960 66Q997 30 1039 64Q1084 45 1110 70H960" fill="#f0e5c7" opacity=".35"/><path d="M0 278L1200 265V600H0Z" fill="#85816a"/><path d="M0 600L1200 480V535L0 660Z" fill="#6a7063"/><path d="M0 533L1200 421" stroke="#c2b08c" stroke-width="17"/>
+<g><rect x="30" y="175" width="365" height="345" fill="#927d65"/><path d="M8 187L202 58 418 187Z" fill="#596a62"/><rect x="30" y="175" width="365" height="345" fill="url(#ww2-brick)"/><rect x="63" y="345" width="70" height="175" fill="#4a5c50"/><g><rect x="66" y="210" width="72" height="88" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M102.0 210V298M66 254.0H138" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="174" y="210" width="72" height="88" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M210.0 210V298M174 254.0H246" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="280" y="210" width="72" height="88" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M316.0 210V298M280 254.0H352" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="172" y="348" width="72" height="94" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M208.0 348V442M172 395.0H244" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="279" y="348" width="72" height="94" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M315.0 348V442M279 395.0H351" stroke="#d6c3a0" stroke-width="4"/></g></g>
+<g><rect x="450" y="199" width="340" height="303" fill="#b09b79"/><path d="M432 201L621 109 812 201Z" fill="#5d6d5f"/><rect x="465" y="253" width="272" height="145" fill="#324b42" stroke="#d5c09b" stroke-width="10"/><path d="M455 199V149H486V199" fill="#a18a6d"/><rect x="764" y="153" width="37" height="51" fill="#9d8667"/><path d="M500 448H718" stroke="#d0b993" stroke-width="13"/>
+<g transform="translate(488 260)"><rect width="115" height="92" rx="23" fill="#795b3e" stroke="#b08a5b" stroke-width="7"/><path d="M23 11V62M35 8V62M47 8V62M59 10V62" stroke="#bea078" stroke-width="4"/><rect x="74" y="18" width="25" height="16" rx="3" fill="#d7c294"/><circle cx="82" cy="63" r="9" fill="#d3c2a0"/><circle cx="102" cy="64" r="5" fill="#d3c2a0"/><rect x="8" y="88" width="99" height="8" fill="#54442e"/></g></g>
+<g opacity=".75"><rect x="855" y="269" width="320" height="184" fill="#8b8b70"/><path d="M840 270L1010 180 1190 270Z" fill="#5c6b5c"/><g><rect x="895" y="309" width="53" height="78" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M921.5 309V387M895 348.0H948" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="1000" y="309" width="53" height="78" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M1026.5 309V387M1000 348.0H1053" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="1100" y="309" width="53" height="78" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M1126.5 309V387M1100 348.0H1153" stroke="#d6c3a0" stroke-width="4"/></g></g>
+<g transform="translate(1008 166) rotate(-10)"><path d="M-101 9L-48-3 2-33 24-34 9-2 84 7 83 17 8 25 24 60 5 57-39 27-101 20Z" fill="#536f66"/><path d="M-49 4L-68-29-53-31-21 6" fill="#667d6e"/><circle cx="52" cy="12" r="6" fill="#b8b398"/><path d="M-31 13H-74" stroke="#b3b49a" stroke-width="4"/></g><g transform="translate(241 341) scale(1.15)"><ellipse cx="0" cy="148" rx="37" ry="8" fill="#213c32" opacity=".25"/><path d="M-15 111L-18 146M15 111L20 146" stroke="#514836" stroke-width="12"/><path d="M-22 45L-29 118H30L22 45Z" fill="#ac956e"/><path d="M-22 57L-38 103M22 57L39 99" stroke="#cea17b" stroke-width="12" stroke-linecap="round"/><circle cy="22" r="23" fill="#cea17b"/><path d="M-23 16Q-18-12 4-3Q26-1 24 20Q8 6-11 14Z" fill="#634a36"/><rect x="-57" y="98" width="54" height="47" rx="4" fill="#805e40" stroke="#584631" stroke-width="4"/><path d="M-42 98V91H-19V98" fill="none" stroke="#584631" stroke-width="4"/><rect x="-7" y="42" width="20" height="21" fill="#d9d1b2"/><path d="M11 42L21 80" stroke="#ba7958" stroke-width="9"/><path d="M-27 147H-10M12 147H28" stroke="#353a30" stroke-width="8" stroke-linecap="round"/></g><g transform="translate(842 380) scale(1.1)"><ellipse cx="0" cy="148" rx="37" ry="8" fill="#213c32" opacity=".25"/><path d="M-15 111L-18 146M15 111L20 146" stroke="#514836" stroke-width="12"/><path d="M-22 45L-29 118H30L22 45Z" fill="#586b61"/><path d="M-22 57L-38 103M22 57L39 99" stroke="#b98760" stroke-width="12" stroke-linecap="round"/><circle cy="22" r="23" fill="#b98760"/><path d="M-23 16Q-18-12 4-3Q26-1 24 20Q8 6-11 14Z" fill="#40382c"/><path d="M-32 15Q-25-22 0-20Q25-20 32 15Z" fill="#3f544b"/><path d="M-35 15H35" stroke="#6a7c66" stroke-width="6"/><text x="0" y="6" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#e1d7b9">W</text><rect x="26" y="91" width="22" height="35" rx="4" fill="#b9ae88"/><path d="M-27 147H-10M12 147H28" stroke="#353a30" stroke-width="8" stroke-linecap="round"/></g><rect width="1200" height="600" fill="#172d28" opacity=".075"/></svg></template>
+
+<template id="art-victorians"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Victorian street with a schoolchild, portrait of Queen Victoria, steam train and factory"><defs><linearGradient id="victorians-sky" x2="0" y2="1"><stop stop-color="#9bad9c"/><stop offset="1" stop-color="#e0c798"/></linearGradient><linearGradient id="victorians-ground" x2="0" y2="1"><stop stop-color="#8d9470"/><stop offset="1" stop-color="#586044"/></linearGradient><linearGradient id="victorians-stone" x2="0" y2="1"><stop stop-color="#d5c39e"/><stop offset="1" stop-color="#a99570"/></linearGradient><pattern id="victorians-thatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" fill="none" stroke="#cebb82" stroke-width="2" opacity=".6"/></pattern><pattern id="victorians-brick" width="44" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 24H44M22 0V12M0 12H44M0 12V24M44 12V24" stroke="#e1be9677" stroke-width="1.5" fill="none"/></pattern></defs><rect width="1200" height="600" fill="url(#victorians-sky)"/><circle cx="165" cy="112" r="65" fill="#fff0be" opacity=".55"/><path d="M500 85Q535 47 577 81Q625 57 658 86H500M960 66Q997 30 1039 64Q1084 45 1110 70H960" fill="#f0e5c7" opacity=".35"/><path d="M0 309L1200 301V600H0Z" fill="#928d6a"/><path d="M0 560L610 360 1200 427V600H0Z" fill="#b8a37d"/><path d="M-60 566Q550 407 1200 437M-60 605Q550 447 1200 474" stroke="#6a624d" stroke-width="7" fill="none"/>
+<g><rect x="22" y="185" width="337" height="326" fill="#a88b6c"/><path d="M0 189L189 93 380 189Z" fill="#65735f"/><rect x="22" y="185" width="337" height="326" fill="url(#victorians-brick)"/><rect x="40" y="320" width="159" height="191" fill="#526356"/><rect x="60" y="300" width="149" height="39" fill="#e1cb9b"/><text x="135" y="327" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="bold" fill="#4e5546">SCHOOL</text><g><rect x="63" y="208" width="69" height="70" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M97.5 208V278M63 243.0H132" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="171" y="208" width="69" height="70" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M205.5 208V278M171 243.0H240" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="271" y="208" width="57" height="70" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M299.5 208V278M271 243.0H328" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="249" y="345" width="70" height="89" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M284.0 345V434M249 389.5H319" stroke="#d6c3a0" stroke-width="4"/></g></g>
+<g><rect x="396" y="166" width="306" height="290" fill="#ad9977"/><path d="M383 176L551 93 715 176Z" fill="#596859"/><rect x="466" y="205" width="127" height="168" fill="#dac092" stroke="#715b40" stroke-width="12"/><rect x="477" y="216" width="105" height="146" fill="#526a60"/>
+<g transform="translate(529 229)"><path d="M-21 51L-38 119H38L21 51Z" fill="#9b756e"/><path d="M-21 65Q0 96 21 65L16 107H-16Z" fill="#c3ae8b"/><circle cy="28" r="23" fill="#d3a47c"/><path d="M-23 25Q-25-4 0-3Q27-3 24 25L14 7H-14Z" fill="#544332"/><path d="M-15 4L-15-4-6 2 0-8 6 2 15-4 15 4" fill="#d5bc7d"/><circle cy="62" r="5" fill="#d9c68d"/></g><rect x="468" y="383" width="125" height="24" fill="#d6c192"/><text x="530" y="400" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="bold" fill="#4c4e3f">QUEEN VICTORIA</text></g>
+<g><rect x="836" y="224" width="337" height="135" fill="#87735b"/><rect x="836" y="224" width="337" height="135" fill="url(#victorians-brick)"/><path d="M818 230L865 182 912 229 961 183 1008 229 1060 182 1111 229 1163 183 1194 230Z" fill="#637063"/><rect x="990" y="119" width="45" height="111" fill="#8e7b62"/><path d="M983 117H1042" stroke="#bea57a" stroke-width="12"/><path d="M1011 110Q969 83 1007 69Q1053 60 1029 33Q1046 17 1099 17" stroke="#70877a" stroke-width="33" fill="none" opacity=".4"/><g><rect x="865" y="265" width="33" height="58" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M881.5 265V323M865 294.0H898" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="928" y="265" width="33" height="58" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M944.5 265V323M928 294.0H961" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="1060" y="265" width="33" height="58" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M1076.5 265V323M1060 294.0H1093" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="1123" y="265" width="33" height="58" fill="#5b7774" stroke="#d6c3a0" stroke-width="7"/><path d="M1139.5 265V323M1123 294.0H1156" stroke="#d6c3a0" stroke-width="4"/></g></g>
+<g transform="translate(661 335)"><rect x="184" y="17" width="207" height="92" fill="#9a7051" stroke="#63533e" stroke-width="4"/><rect x="200" y="28" width="43" height="40" fill="#b2c7b0"/><rect x="256" y="28" width="43" height="40" fill="#b2c7b0"/><rect x="312" y="28" width="61" height="40" fill="#b2c7b0"/><path d="M178 10H401" stroke="#5f6550" stroke-width="14"/><rect x="29" y="32" width="157" height="73" rx="20" fill="#435e54"/><rect x="122" y="1" width="66" height="95" fill="#4d695c"/><rect x="136" y="14" width="35" height="39" fill="#bdc6a8"/><path d="M44 41V-3H67V41" stroke="#354b43" stroke-width="17"/><path d="M42-9Q2-43 58-59Q104-71 72-93" stroke="#d8d5b2" stroke-width="29" fill="none" opacity=".7"/><path d="M18 96H394" stroke="#a1936a" stroke-width="10"/><circle cx="58" cy="113" r="26" fill="#36463b" stroke="#c0b081" stroke-width="6"/><circle cx="111" cy="113" r="29" fill="#36463b" stroke="#c0b081" stroke-width="6"/><circle cx="173" cy="113" r="26" fill="#36463b" stroke="#c0b081" stroke-width="6"/><circle cx="238" cy="113" r="22" fill="#36463b" stroke="#c0b081" stroke-width="5"/><circle cx="347" cy="113" r="22" fill="#36463b" stroke="#c0b081" stroke-width="5"/><path d="M58 113H174" stroke="#b9a878" stroke-width="7"/></g><g transform="translate(239 341) scale(1.15)"><ellipse cx="0" cy="148" rx="37" ry="8" fill="#213c32" opacity=".25"/><path d="M-15 111L-18 146M15 111L20 146" stroke="#514836" stroke-width="12"/><path d="M-22 45L-29 118H30L22 45Z" fill="#72816e"/><path d="M-22 57L-38 103M22 57L39 99" stroke="#c59670" stroke-width="12" stroke-linecap="round"/><circle cy="22" r="23" fill="#c59670"/><path d="M-23 16Q-18-12 4-3Q26-1 24 20Q8 6-11 14Z" fill="#574031"/><rect x="-45" y="94" width="41" height="51" rx="3" fill="#d2c094" stroke="#816c4d" stroke-width="3"/><path d="M-39 98H-8" stroke="#9e8762" stroke-width="4"/><path d="M-27 147H-10M12 147H28" stroke="#353a30" stroke-width="8" stroke-linecap="round"/></g><rect width="1200" height="600" fill="#172d28" opacity=".075"/></svg></template>
+
+<template id="art-tudors"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Tudor market with a trader, portrait of Henry VII, timber-framed house and Tudor rose"><defs><linearGradient id="tudors-sky" x2="0" y2="1"><stop stop-color="#a8b6a1"/><stop offset="1" stop-color="#e4c79a"/></linearGradient><linearGradient id="tudors-ground" x2="0" y2="1"><stop stop-color="#8d9470"/><stop offset="1" stop-color="#586044"/></linearGradient><linearGradient id="tudors-stone" x2="0" y2="1"><stop stop-color="#d5c39e"/><stop offset="1" stop-color="#a99570"/></linearGradient><pattern id="tudors-thatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" fill="none" stroke="#cebb82" stroke-width="2" opacity=".6"/></pattern><pattern id="tudors-brick" width="44" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 24H44M22 0V12M0 12H44M0 12V24M44 12V24" stroke="#e1be9677" stroke-width="1.5" fill="none"/></pattern></defs><rect width="1200" height="600" fill="url(#tudors-sky)"/><circle cx="165" cy="112" r="65" fill="#fff0be" opacity=".55"/><path d="M500 85Q535 47 577 81Q625 57 658 86H500M960 66Q997 30 1039 64Q1084 45 1110 70H960" fill="#f0e5c7" opacity=".35"/><path d="M0 323Q600 286 1200 317V600H0Z" fill="#7e8965"/><path d="M0 520L489 319 792 304 1200 449V600H0Z" fill="#b59c71"/><path d="M25 557L555 338M318 600L673 350M659 600L781 360M959 600L921 369" stroke="#d2ba8d" stroke-width="2" opacity=".5"/>
+<g><rect x="31" y="220" width="293" height="215" fill="#bca77e"/><path d="M12 230L180 107 341 230Z" fill="#67735b"/><path d="M50 230V432M176 140V433M303 230V432M30 309H324M50 239L170 309 303 232M56 417L166 313 291 421" stroke="#554934" stroke-width="13"/><g><rect x="72" y="329" width="65" height="71" fill="#5b6d57" stroke="#d6c3a0" stroke-width="7"/><path d="M104.5 329V400M72 364.5H137" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="214" y="329" width="68" height="71" fill="#5b6d57" stroke="#d6c3a0" stroke-width="7"/><path d="M248.0 329V400M214 364.5H282" stroke="#d6c3a0" stroke-width="4"/></g></g>
+<g><rect x="372" y="187" width="306" height="279" fill="#bfad82"/><path d="M354 194L524 72 692 194Z" fill="#657259"/><path d="M382 190V466M667 190V466M372 341H678M525 103V462" stroke="#5f4b36" stroke-width="12"/><rect x="466" y="199" width="125" height="156" fill="#a78756" stroke="#564a35" stroke-width="9"/><rect x="474" y="207" width="109" height="140" fill="#537065"/>
+<g transform="translate(528 215)"><path d="M-23 52L-43 125H43L23 52Z" fill="#8d5345"/><path d="M-20 50L-29 77H-16L0 118 17 75H28L20 50Z" fill="#bbaa86"/><circle cy="27" r="22" fill="#c89b73"/><path d="M-24 21Q-21 3 0 0Q22 2 25 21" fill="#493d2e"/><path d="M-25 9Q0-16 25 9L21 17H-23Z" fill="#5b6546"/><path d="M-23 7H22" stroke="#c7b36b" stroke-width="4"/><path d="M-7 29L-5 47H6L8 29" fill="#b48b65" opacity=".6"/></g><rect x="469" y="362" width="121" height="26" fill="#d9c38c"/><text x="529" y="380" text-anchor="middle" font-family="sans-serif" font-size="15" font-weight="bold" fill="#4e503d">HENRY VII</text></g>
+<g><path d="M760 325L853 165 1143 211V530L760 562Z" fill="#c1ad82"/><path d="M760 325L853 165 960 300V545L760 562Z" fill="#d4c196"/><path d="M726 332L850 141 979 319 1168 232 1150 197 852 115Z" fill="#5d6a54"/><path d="M853 165V550M766 323V559M960 307V545M760 419L960 409 1146 394M973 302L1146 214M972 313V540M1084 256V532M771 328L852 412 943 326M774 538L852 422 945 534" stroke="#5b4834" stroke-width="15"/><rect x="803" y="455" width="60" height="100" fill="#544733"/><g><rect x="789" y="345" width="51" height="58" fill="#5e715d" stroke="#d6c3a0" stroke-width="7"/><path d="M814.5 345V403M789 374.0H840" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="880" y="345" width="51" height="58" fill="#5e715d" stroke="#d6c3a0" stroke-width="7"/><path d="M905.5 345V403M880 374.0H931" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="992" y="342" width="44" height="55" fill="#5e715d" stroke="#d6c3a0" stroke-width="7"/><path d="M1014.0 342V397M992 369.5H1036" stroke="#d6c3a0" stroke-width="4"/></g><g><rect x="1093" y="302" width="34" height="54" fill="#5e715d" stroke="#d6c3a0" stroke-width="7"/><path d="M1110.0 302V356M1093 329.0H1127" stroke="#d6c3a0" stroke-width="4"/></g></g>
+<g transform="translate(1008 193)"><circle r="54" fill="#d3bc82" stroke="#665c3d" stroke-width="7"/><g fill="#a35e4d"><circle cy="-21" r="22"/><circle cx="20" cy="-7" r="22"/><circle cx="13" cy="18" r="22"/><circle cx="-13" cy="18" r="22"/><circle cx="-20" cy="-7" r="22"/></g><g fill="#e5d3ab"><circle cy="-12" r="12"/><circle cx="11" cy="-4" r="12"/><circle cx="7" cy="10" r="12"/><circle cx="-7" cy="10" r="12"/><circle cx="-11" cy="-4" r="12"/></g><circle r="8" fill="#c4a159"/></g>
+<g transform="translate(61 322)"><path d="M0 54H300L267 0H34Z" fill="#ba9367"/><path d="M4 53H295" stroke="#64543a" stroke-width="9"/><path d="M20 55V170M280 55V170" stroke="#5e4c34" stroke-width="10"/><rect x="8" y="143" width="292" height="16" fill="#8c724e"/><path d="M8 158V209M292 158V209" stroke="#655237" stroke-width="10"/><ellipse cx="68" cy="136" rx="37" ry="10" fill="#8b6744"/><path d="M43 124Q40 93 69 84Q97 99 94 127Z" fill="#b09361"/><path d="M164 146Q155 106 187 96Q218 106 211 146Z" fill="#a47d52"/><path d="M233 141Q219 114 245 103Q270 109 266 140Z" fill="#c19b61"/></g><g transform="translate(239 341) scale(1.13)"><ellipse cx="0" cy="148" rx="37" ry="8" fill="#213c32" opacity=".25"/><path d="M-15 111L-18 146M15 111L20 146" stroke="#514836" stroke-width="12"/><path d="M-22 45L-29 118H30L22 45Z" fill="#9d8058"/><path d="M-22 57L-38 103M22 57L39 99" stroke="#c19066" stroke-width="12" stroke-linecap="round"/><circle cy="22" r="23" fill="#c19066"/><path d="M-23 16Q-18-12 4-3Q26-1 24 20Q8 6-11 14Z" fill="#40382c"/><path d="M-28 9Q-25-10-4-9Q23-17 30 9Z" fill="#665a3e"/><path d="M-31 11H32" stroke="#8c7950" stroke-width="5"/><path d="M-27 147H-10M12 147H28" stroke="#353a30" stroke-width="8" stroke-linecap="round"/></g><rect width="1200" height="600" fill="#172d28" opacity=".075"/></svg></template>
+
+<template id="art-romans"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Roman world in AD 31 with a soldier, public bath house, paved road and pottery market"><defs><linearGradient id="romans-sky" x2="0" y2="1"><stop stop-color="#a7bcaf"/><stop offset="1" stop-color="#e8d3a6"/></linearGradient><linearGradient id="romans-ground" x2="0" y2="1"><stop stop-color="#8d9470"/><stop offset="1" stop-color="#586044"/></linearGradient><linearGradient id="romans-stone" x2="0" y2="1"><stop stop-color="#d5c39e"/><stop offset="1" stop-color="#a99570"/></linearGradient><pattern id="romans-thatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" fill="none" stroke="#cebb82" stroke-width="2" opacity=".6"/></pattern><pattern id="romans-brick" width="44" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 24H44M22 0V12M0 12H44M0 12V24M44 12V24" stroke="#e1be9677" stroke-width="1.5" fill="none"/></pattern></defs><rect width="1200" height="600" fill="url(#romans-sky)"/><circle cx="165" cy="112" r="65" fill="#fff0be" opacity=".55"/><path d="M500 85Q535 47 577 81Q625 57 658 86H500M960 66Q997 30 1039 64Q1084 45 1110 70H960" fill="#f0e5c7" opacity=".35"/><path d="M0 275L200 198 365 264 600 177 780 259 1000 180 1200 257V600H0Z" fill="#819279" opacity=".6"/><path d="M0 317Q530 265 1200 319V600H0Z" fill="#98976f"/><path d="M595 320L731 320 1159 600H400Z" fill="#b7ad88"/><path d="M614 327L454 600M658 327L722 600M700 327L1040 600" stroke="#7f8166" stroke-width="3"/><path d="M601 371H809M550 430H900M490 497H1004M426 581H1124" stroke="#7e8166" stroke-width="4"/>
+<g><rect x="334" y="171" width="385" height="232" fill="url(#romans-stone)"/><path d="M312 183L523 71 742 183Z" fill="#ae8760"/><path d="M333 175H718" stroke="#d3bf91" stroke-width="15"/><path d="M363 185V352M452 185V352M594 185V352M680 185V352" stroke="#d6c9a3" stroke-width="27"/><path d="M345 189H700M348 353H700M332 374H718M310 393H741" stroke="#aa9c73" stroke-width="13"/><path d="M481 349V260A44 44 0 0 1 569 260V349Z" fill="#536f64"/><path d="M484 276H566" stroke="#7d9d87" stroke-width="5"/><path d="M480 310H570" stroke="#789884" stroke-width="5"/><circle cx="528" cy="135" r="20" fill="#d0bc90"/><path d="M500 405Q536 392 576 405" stroke="#c2bea2" stroke-width="12" fill="none"/></g>
+<g opacity=".8"><rect x="55" y="231" width="206" height="133" fill="#b7ae87"/><path d="M37 233L160 162 276 233Z" fill="#a3815b"/><path d="M76 245V358M124 245V358M174 245V358M222 245V358" stroke="#d6c69b" stroke-width="17"/></g>
+<g transform="translate(928 142)"><rect x="-13" y="68" width="230" height="169" fill="#b5a57d"/><path d="M-30 74L110 2 237 74Z" fill="#977756"/><path d="M-20 104H211L189 74H4Z" fill="#c8b483"/><path d="M-17 110V243M210 110V243" stroke="#6c5a3d" stroke-width="9"/><path d="M-19 184H216" stroke="#705d42" stroke-width="12"/><path d="M7 175Q-1 132 25 121Q53 132 46 175Z" fill="#b67e57"/><path d="M71 175Q65 143 87 132Q112 142 108 175Z" fill="#c09263"/><ellipse cx="149" cy="173" rx="31" ry="11" fill="#a18755"/><path d="M117 171Q143 148 181 170" fill="#d0b17b"/></g>
+<g transform="translate(116 433)"><ellipse rx="51" ry="14" fill="#8f7850"/><path d="M-47-5L-34-67H34L47-5Z" fill="#b98d61"/><ellipse cy="-68" rx="35" ry="9" fill="#544b36"/><path d="M31-60Q66-44 42-19" stroke="#bd9568" stroke-width="10" fill="none"/></g>
+<g transform="translate(240 345)"><ellipse cy="172" rx="57" ry="11" fill="#354a3b" opacity=".3"/><path d="M-18 119L-20 169M17 119L20 169" stroke="#a57d56" stroke-width="15"/><path d="M-27 50L-36 130H35L27 50Z" fill="#9b6854"/><path d="M-31 45H31V90H-31Z" fill="#adaf8d"/><path d="M-30 59H29M-31 75H30" stroke="#7a8770" stroke-width="5"/><circle cy="22" r="24" fill="#bf936d"/><path d="M-28 14Q-20-18 7-14Q29-11 31 20L23 25V37H15V15Z" fill="#a9aa84"/><path d="M-24-8L-14-24H22L27-8Z" fill="#8b604a"/><path d="M-27 52L-48 108M28 54L58 87" stroke="#bf936d" stroke-width="12" stroke-linecap="round"/><path d="M58 82V-94" stroke="#6e6645" stroke-width="7"/><path d="M58-95L49-70 67-70Z" fill="#d1c5a0"/><path d="M-78 52Q-42 36-11 55V133Q-41 161-78 133Z" fill="#9f7255" stroke="#d0b37e" stroke-width="5"/><path d="M-43 63V129M-67 95H-21" stroke="#d7bf88" stroke-width="7"/><circle cx="-43" cy="95" r="10" fill="#bdac79"/><path d="M-30 169H-9M10 169H32" stroke="#575541" stroke-width="9" stroke-linecap="round"/></g><rect width="1200" height="600" fill="#172d28" opacity=".075"/></svg></template>
+
+<template id="art-greece"><svg class="scene-art" viewBox="0 0 1200 600" preserveAspectRatio="none" role="img" aria-label="Early Greek coastal settlement around 1100 BC with a farmer, simple shrine, home and trader; later Classical temples and theatres have not yet appeared"><defs><linearGradient id="greece-sky" x2="0" y2="1"><stop stop-color="#a6b9af"/><stop offset="1" stop-color="#ecd3a3"/></linearGradient><linearGradient id="greece-ground" x2="0" y2="1"><stop stop-color="#8d9470"/><stop offset="1" stop-color="#586044"/></linearGradient><linearGradient id="greece-stone" x2="0" y2="1"><stop stop-color="#d5c39e"/><stop offset="1" stop-color="#a99570"/></linearGradient><pattern id="greece-thatch" width="12" height="12" patternUnits="userSpaceOnUse"><path d="M0 0L12 12M-6 0L6 12" fill="none" stroke="#cebb82" stroke-width="2" opacity=".6"/></pattern><pattern id="greece-brick" width="44" height="24" patternUnits="userSpaceOnUse"><path d="M0 0H44M0 24H44M22 0V12M0 12H44M0 12V24M44 12V24" stroke="#e1be9677" stroke-width="1.5" fill="none"/></pattern></defs><rect width="1200" height="600" fill="url(#greece-sky)"/><circle cx="165" cy="112" r="65" fill="#fff0be" opacity=".55"/><path d="M500 85Q535 47 577 81Q625 57 658 86H500M960 66Q997 30 1039 64Q1084 45 1110 70H960" fill="#f0e5c7" opacity=".35"/><path d="M0 254L160 128 318 243 491 162 668 275 893 151 1051 245 1200 168V600H0Z" fill="#73907e" opacity=".55"/><path d="M0 332Q208 258 509 294T1053 293L1200 267V600H0Z" fill="#919369"/><path d="M696 288Q866 252 1200 285V430L987 388 800 331Z" fill="#6d9690"/><path d="M940 290Q1030 276 1128 292M971 320Q1085 307 1200 322M1090 351H1198" fill="none" stroke="#c3cfad" stroke-width="3" opacity=".55"/>
+<path d="M0 600Q380 358 558 370T1200 460" stroke="#c0aa7d" stroke-width="103" fill="none"/>
+<g transform="translate(41 407)"><path d="M0 170L98 0M50 170L136 0M103 170L174 0M154 170L212 0M205 170L250 0" stroke="#817c4c" stroke-width="10"/><g stroke="#c0ad65" stroke-width="5" fill="none"><path d="M38 115V60M94 109V57M145 107V54M187 96V47M225 87V40"/></g><g fill="#d0b979"><ellipse cx="39" cy="51" rx="8" ry="21" transform="rotate(25 39 51)"/><ellipse cx="95" cy="49" rx="8" ry="21" transform="rotate(25 95 49)"/><ellipse cx="146" cy="45" rx="8" ry="21" transform="rotate(25 146 45)"/><ellipse cx="189" cy="39" rx="8" ry="21" transform="rotate(25 189 39)"/><ellipse cx="226" cy="31" rx="8" ry="21" transform="rotate(25 226 31)"/></g></g>
+<g transform="translate(427 225)"><path d="M0 160H207L184 181H-15Z" fill="#aa9870"/><path d="M24 60V160H184V60Z" fill="#c0b18a"/><path d="M6 66L106-4 203 65Z" fill="#a49066"/><path d="M6 66L106-4 203 65Z" fill="url(#greece-thatch)"/><rect x="78" y="93" width="55" height="69" fill="#576a52"/><path d="M16 93H77M136 95H184M25 129H78M135 129H184" stroke="#9e916b" stroke-width="3"/><path d="M70 177H137V188H70Z" fill="#8c7f59"/><ellipse cx="103" cy="179" rx="18" ry="5" fill="#d2bc8c"/><path d="M98 166Q105 147 111 166V178H97Z" fill="#af7f54"/></g>
+<g transform="translate(722 261)"><path d="M0 150L92 37 300 110V255L157 308 0 258Z" fill="#b7a982"/><path d="M-26 159L95 12 327 99 168 230Z" fill="#ab9362"/><path d="M-26 159L95 12 327 99 168 230Z" fill="url(#greece-thatch)"/><path d="M157 226L300 111V255L157 308Z" fill="#938763"/><path d="M49 204V281L93 290V215Z" fill="#524e38"/><path d="M210 207L259 172V215L210 251Z" fill="#52654e"/><path d="M15 188L98 208M13 223L47 232M108 239L151 254M169 253L205 225M263 184L294 160" stroke="#948766" stroke-width="3"/></g>
+<g transform="translate(1044 308)"><path d="M-102-5Q-22 58 85-20L59 11Q-24 62-83 25Z" fill="#786345" stroke="#5a5740" stroke-width="5"/><path d="M-14-14V20" stroke="#675e40" stroke-width="7"/><path d="M-8-101V-10H68Z" fill="#e2d4ae"/><path d="M-12-102V-15" stroke="#6a684a" stroke-width="6"/><path d="M-106-5L-118-33" stroke="#786345" stroke-width="7"/></g>
+<g transform="translate(1061 336)"><path d="M0 62Q-14 27 7 15Q28 27 15 62Z" fill="#a5764d"/><ellipse cx="8" cy="16" rx="13" ry="5" fill="#6b5b3e"/><path d="M28 58Q20 34 38 24Q57 34 50 58Z" fill="#c19a62"/><ellipse cx="40" cy="25" rx="11" ry="4" fill="#766745"/></g><g transform="translate(239 337) scale(1.17)"><ellipse cx="0" cy="148" rx="37" ry="8" fill="#213c32" opacity=".25"/><path d="M-15 111L-18 146M15 111L20 146" stroke="#514836" stroke-width="12"/><path d="M-22 45L-29 118H30L22 45Z" fill="#bead82"/><path d="M-22 57L-38 103M22 57L39 99" stroke="#c09468" stroke-width="12" stroke-linecap="round"/><circle cy="22" r="23" fill="#c09468"/><path d="M-23 16Q-18-12 4-3Q26-1 24 20Q8 6-11 14Z" fill="#574831"/><path d="M-39 97L-64 155M-75 157H-48" stroke="#786643" stroke-width="7"/><path d="M-27 147H-10M12 147H28" stroke="#353a30" stroke-width="8" stroke-linecap="round"/></g><g transform="translate(1005 147) scale(0.9)"><ellipse cx="0" cy="148" rx="37" ry="8" fill="#213c32" opacity=".25"/><path d="M-15 111L-18 146M15 111L20 146" stroke="#514836" stroke-width="12"/><path d="M-22 45L-29 118H30L22 45Z" fill="#a7845e"/><path d="M-22 57L-38 103M22 57L39 99" stroke="#bb8c62" stroke-width="12" stroke-linecap="round"/><circle cy="22" r="23" fill="#bb8c62"/><path d="M-23 16Q-18-12 4-3Q26-1 24 20Q8 6-11 14Z" fill="#3f3f2e"/><path d="M-33 101Q-33 72-15 70Q2 77-6 107Z" fill="#b58a5b"/><path d="M-27 147H-10M12 147H28" stroke="#353a30" stroke-width="8" stroke-linecap="round"/></g><rect width="1200" height="600" fill="#172d28" opacity=".075"/></svg></template>
+
+
   <script>
   // LESSON CONTENT — edit these structured records to change the lesson.
 const LESSON = {
   "stops": [
+    {
+      "id": "present",
+      "year": 2026,
+      "date": "PRESENT DAY",
+      "title": "Our journey starts today",
+      "shortTitle": "Present day",
+      "region": "YOUR CLASSROOM · TODAY",
+      "intro": "Welcome, historians! We begin in the present. Every journey through history starts with knowing where you are.",
+      "question": "Chronology means putting events in time order.",
+      "symbol": "◷",
+      "book": {
+        "period": "Present day",
+        "symbol": "present",
+        "label": "A simple clock"
+      },
+      "hotspots": [
+        {
+          "id": "classroom",
+          "title": "Our classroom",
+          "text": "Look around! This is the present day. The things we use today will one day be part of history.",
+          "symbol": "⌂",
+          "x": 20,
+          "y": 60
+        },
+        {
+          "id": "pupil",
+          "title": "Meet a historian",
+          "text": "You are a historian today! Ask questions, look for clues and think about when things happened.",
+          "symbol": "✧",
+          "x": 44,
+          "y": 45
+        },
+        {
+          "id": "tablet",
+          "title": "Tools today",
+          "text": "We use computers and tablets to learn, play and talk. People in the past used different tools.",
+          "symbol": "▣",
+          "x": 70,
+          "y": 65
+        },
+        {
+          "id": "calendar",
+          "title": "Today on the timeline",
+          "text": "The present is at the right-hand end of our timeline. Earlier dates go to the left.",
+          "symbol": "◷",
+          "x": 84,
+          "y": 32
+        }
+      ]
+    },
+    {
+      "id": "modern2017",
+      "year": 2017,
+      "date": "2017",
+      "title": "A small step into the past",
+      "shortTitle": "2017",
+      "region": "A MODERN NEIGHBOURHOOD",
+      "intro": "Were any of you born around this time? We have travelled back just a few years.",
+      "question": "This feels close to today. Much older history is still ahead!",
+      "symbol": "▣",
+      "book": {
+        "period": "Modern life in 2017",
+        "symbol": "phone",
+        "label": "A simple smartphone"
+      },
+      "hotspots": [
+        {
+          "id": "baby",
+          "title": "Hello, baby!",
+          "text": "A baby born in 2017 is growing up now. Does anyone in your class know someone born around this time?",
+          "symbol": "♡",
+          "x": 20,
+          "y": 60
+        },
+        {
+          "id": "phone",
+          "title": "A smartphone",
+          "text": "People were already using smartphones, apps and video calls in 2017. Some things may look very familiar.",
+          "symbol": "▣",
+          "x": 44,
+          "y": 45
+        },
+        {
+          "id": "car",
+          "title": "On the road",
+          "text": "Cars, buses and trains carried people to school and work. How many things in this street do you recognise?",
+          "symbol": "▱",
+          "x": 70,
+          "y": 65
+        },
+        {
+          "id": "calendar",
+          "title": "Check the year",
+          "text": "The year is 2017. It comes before today, but after every other historical stop on our journey.",
+          "symbol": "◷",
+          "x": 84,
+          "y": 32
+        }
+      ]
+    },
+    {
+      "id": "ww2",
+      "year": 1939,
+      "date": "1939",
+      "title": "The Second World War begins",
+      "shortTitle": "World War Two",
+      "region": "BRITAIN · A CITY STREET",
+      "intro": "We have reached 1939. The Second World War is beginning, and families are preparing for difficult times.",
+      "question": "Have we travelled a long way yet?",
+      "symbol": "✈",
+      "book": {
+        "period": "World War Two",
+        "symbol": "plane",
+        "label": "A simple aeroplane"
+      },
+      "hotspots": [
+        {
+          "id": "evacuee",
+          "title": "Meet an evacuee",
+          "text": "Many children were sent away from cities to safer places. Adults feared that bombs could fall on their homes.",
+          "symbol": "♧",
+          "x": 20,
+          "y": 60
+        },
+        {
+          "id": "radio",
+          "title": "News on the radio",
+          "text": "Families listened to the radio for news. They could not open an app or watch television news whenever they wanted.",
+          "symbol": "▣",
+          "x": 44,
+          "y": 45
+        },
+        {
+          "id": "warden",
+          "title": "An air raid warden",
+          "text": "My job is to help people stay safe during air raids. I help people find shelter and follow safety rules.",
+          "symbol": "✧",
+          "x": 70,
+          "y": 65
+        },
+        {
+          "id": "aircraft",
+          "title": "A war across the world",
+          "text": "The Second World War involved countries across the world. It began in 1939 and lasted until 1945.",
+          "symbol": "✈",
+          "x": 84,
+          "y": 32
+        }
+      ],
+      "followup": "Not even close. The beginnings of Maya civilization are thousands of years further back."
+    },
+    {
+      "id": "victorians",
+      "year": 1837,
+      "date": "1837",
+      "title": "Victorian Britain",
+      "shortTitle": "Victorians",
+      "region": "BRITAIN · A GROWING TOWN",
+      "intro": "Queen Victoria has just become queen. Look for clues to a world of schools, railways and factories.",
+      "question": "Which happened first: the Victorians or World War Two?",
+      "symbol": "♛",
+      "book": {
+        "period": "Victorian Britain",
+        "symbol": "crown",
+        "label": "A simple crown"
+      },
+      "check": {
+        "question": "Which happened first?",
+        "options": [
+          "Victorians",
+          "World War Two"
+        ],
+        "correct": 0,
+        "success": "Exactly! The Victorian period began in 1837. World War Two began later, in 1939.",
+        "retry": "Look at the years. 1837 comes before 1939. Have another go!"
+      },
+      "hotspots": [
+        {
+          "id": "schoolchild",
+          "title": "Meet a schoolchild",
+          "text": "Hello! School could be much stricter than your school today. Our lessons and classroom probably look different too.",
+          "symbol": "♧",
+          "x": 20,
+          "y": 60
+        },
+        {
+          "id": "queen",
+          "title": "Queen Victoria",
+          "text": "I became queen in 1837. The Victorian period is named after me. My reign lasted until 1901.",
+          "symbol": "♛",
+          "x": 44,
+          "y": 45
+        },
+        {
+          "id": "train",
+          "title": "A steam train",
+          "text": "Railways grew rapidly during Victorian times. Steam trains helped people and goods travel much faster across Britain.",
+          "symbol": "▱",
+          "x": 70,
+          "y": 65
+        },
+        {
+          "id": "factory",
+          "title": "The factory",
+          "text": "Machines changed how many things were made. Factories grew, and many people moved to towns to find work.",
+          "symbol": "⚒",
+          "x": 84,
+          "y": 32
+        }
+      ]
+    },
+    {
+      "id": "tudors",
+      "year": 1485,
+      "date": "1485",
+      "title": "Tudor England",
+      "shortTitle": "Tudors",
+      "region": "ENGLAND · A MARKET STREET",
+      "intro": "The Tudor period begins. Explore a busy street and make a prediction about the Maya.",
+      "question": "Were Maya communities already living in Mesoamerica in 1485?",
+      "symbol": "❀",
+      "book": {
+        "period": "Tudor England",
+        "symbol": "rose",
+        "label": "A simple Tudor rose"
+      },
+      "prediction": {
+        "key": "history-tudor-prediction",
+        "question": "Were Maya communities already living in Mesoamerica in 1485?"
+      },
+      "hotspots": [
+        {
+          "id": "trader",
+          "title": "Meet a market trader",
+          "text": "Most people do not live like kings and queens. Ordinary families work hard to earn a living and feed their children.",
+          "symbol": "⚒",
+          "x": 20,
+          "y": 60
+        },
+        {
+          "id": "henry",
+          "title": "Henry VII",
+          "text": "The Tudor period begins in 1485, when I become king of England. I am the first Tudor monarch.",
+          "symbol": "♛",
+          "x": 44,
+          "y": 45
+        },
+        {
+          "id": "house",
+          "title": "A timber house",
+          "text": "Many Tudor buildings use timber frames. The wooden beams help hold up the walls and roof.",
+          "symbol": "⌂",
+          "x": 70,
+          "y": 65
+        },
+        {
+          "id": "rose",
+          "title": "The Tudor rose",
+          "text": "This rose is a Tudor royal symbol. You may recognise Henry VIII, but he becomes king later, in 1509.",
+          "symbol": "❀",
+          "x": 84,
+          "y": 32
+        }
+      ]
+    },
     {
       "id": "vikings",
       "year": 800,
@@ -118,7 +449,122 @@ const LESSON = {
           "y": 32,
           "symbol": "✧"
         }
+      ],
+      "shortTitle": "Vikings",
+      "book": {
+        "period": "Viking Age",
+        "symbol": "ship",
+        "label": "A simple longship"
+      },
+      "prediction": {
+        "key": "history-viking-prediction",
+        "question": "Were Maya cities also existing around AD 800?"
+      }
+    },
+    {
+      "id": "romans",
+      "year": 31,
+      "date": "AD 31",
+      "title": "The Roman world",
+      "shortTitle": "Romans",
+      "region": "THE MEDITERRANEAN · ROMAN EMPIRE",
+      "intro": "AD 31 is one marker in a long Roman story. Roman history covers many centuries, not just this year.",
+      "question": "Do you think Maya civilization had begun by AD 31?",
+      "symbol": "⚔",
+      "book": {
+        "period": "Roman world",
+        "symbol": "helmet",
+        "label": "A simple Roman helmet"
+      },
+      "prediction": {
+        "key": "history-roman-prediction",
+        "question": "Do you think Maya civilization had begun by AD 31?"
+      },
+      "hotspots": [
+        {
+          "id": "soldier",
+          "title": "Meet a Roman soldier",
+          "text": "The Roman Empire controls huge areas around the Mediterranean. Soldiers help defend it and carry out building work.",
+          "symbol": "⚔",
+          "x": 20,
+          "y": 60
+        },
+        {
+          "id": "baths",
+          "title": "The public baths",
+          "text": "Public baths are places for washing, exercising and meeting people. Many Roman towns have baths for people to visit.",
+          "symbol": "♧",
+          "x": 44,
+          "y": 45
+        },
+        {
+          "id": "road",
+          "title": "A Roman road",
+          "text": "Romans build thousands of kilometres of roads. Soldiers, traders and travellers use them to move across the empire.",
+          "symbol": "↔",
+          "x": 70,
+          "y": 65
+        },
+        {
+          "id": "market",
+          "title": "A busy market",
+          "text": "Roman cities can be busy places, filled with traders and craftspeople. People buy food, pottery, cloth and many other things.",
+          "symbol": "⚒",
+          "x": 84,
+          "y": 32
+        }
       ]
+    },
+    {
+      "id": "greece",
+      "year": -1100,
+      "date": "c. 1100 BC",
+      "title": "Ancient Greece",
+      "shortTitle": "Ancient Greece",
+      "region": "GREECE · THE MEDITERRANEAN",
+      "intro": "1100 BC is a broad marker in a long Greek story. Famous temples, theatres and Olympic Games belong to later centuries.",
+      "question": "Destination scanner detecting something… Mesoamerica!",
+      "symbol": "▥",
+      "book": {
+        "period": "Ancient Greece",
+        "symbol": "column",
+        "label": "A simple Greek column"
+      },
+      "hotspots": [
+        {
+          "id": "farmer",
+          "title": "Meet a farmer",
+          "text": "We grow food and keep animals. Many communities in Greece farm the land. Life changes across the centuries of Greek history.",
+          "symbol": "♧",
+          "x": 20,
+          "y": 60
+        },
+        {
+          "id": "shrine",
+          "title": "A small shrine",
+          "text": "Religion is important in Greek life. People make offerings to their gods. Over the centuries, communities build larger temples too.",
+          "symbol": "✧",
+          "x": 44,
+          "y": 45
+        },
+        {
+          "id": "house",
+          "title": "An early Greek home",
+          "text": "Homes use materials such as wood, stone and mud bricks. This early town is centuries before the famous theatres and Classical temples.",
+          "symbol": "⌂",
+          "x": 70,
+          "y": 65
+        },
+        {
+          "id": "trader",
+          "title": "Across the sea",
+          "text": "Over many centuries, Greek communities trade across the Mediterranean. The sea connects towns and helps people exchange goods and ideas.",
+          "symbol": "⛵",
+          "x": 84,
+          "y": 32
+        }
+      ],
+      "followup": "Approximately 900 years further back. Our Maya destination is getting closer."
     },
     {
       "id": "maya",
@@ -170,7 +616,13 @@ const LESSON = {
           "y": 32,
           "symbol": "✧"
         }
-      ]
+      ],
+      "shortTitle": "Early Maya",
+      "book": {
+        "period": "Early Maya civilization",
+        "symbol": "maize",
+        "label": "A simple maize cob"
+      }
     }
   ],
   "periods": [
@@ -184,7 +636,7 @@ const LESSON = {
       "name": "Roman world",
       "start": -753,
       "end": 476,
-      "label": "31 BC · our pit stop"
+      "label": "AD 31 · our pit stop"
     },
     {
       "name": "Viking Age",
@@ -259,6 +711,17 @@ const LESSON = {
     "correct": 0,
     "success": "Exactly! Chronological order means putting events in the order in which they happened.",
     "retry": "Try again. Think about which event happened first, and which happened next."
+  },
+  "bookSymbols": {
+    "present": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"100\" cy=\"58\" r=\"44\"/><path d=\"M100 27v31l24 15M100 18v8M100 90v8M60 58h8M132 58h8\"/></g></svg>",
+    "phone": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"72\" y=\"10\" width=\"56\" height=\"100\" rx=\"8\"/><path d=\"M88 21h24M78 88h44\"/><circle cx=\"100\" cy=\"99\" r=\"3\"/></g></svg>",
+    "plane": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M100 10l10 40 68 28v10l-68-12-3 23 22 8v5l-29-5-29 5v-5l22-8-3-23-68 12V78l68-28Z\"/></g></svg>",
+    "crown": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 95L35 35l40 25 25-40 25 40 40-25-15 60ZM50 82h100\"/></g></svg>",
+    "rose": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M100 27C73 0 43 32 58 58 24 71 48 110 79 95 86 121 124 121 130 95 162 109 180 73 147 58 159 30 128 2 100 27Z\"/><circle cx=\"100\" cy=\"68\" r=\"16\"/><path d=\"M100 40v12M74 59l12 4M81 88l9-9M119 89l-9-10M127 57l-13 7\"/></g></svg>",
+    "ship": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20 80Q100 130 180 80l-15 25H35ZM100 85V12l55 58h-55M20 80l-7-20M180 80l7-20M20 115q15-7 30 0t30 0t30 0t30 0t30 0\"/></g></svg>",
+    "helmet": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M57 74V61a43 43 0 0186 0v13ZM58 74v33h18V74M142 74v33h-18V74M57 74h86M86 18V9h28v9M100 75v25\"/></g></svg>",
+    "column": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M60 15h80v14H60ZM70 29h60v67H70ZM57 96h86v14H57ZM83 36v52M100 36v52M117 36v52\"/></g></svg>",
+    "maize": "<svg viewBox=\"0 0 200 120\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><ellipse cx=\"100\" cy=\"55\" rx=\"18\" ry=\"42\"/><path d=\"M100 110Q45 80 72 52l28 43Q150 70 131 52L100 110M92 25v60m16-60v60M83 40h34M82 55h36M85 70h30\"/></g></svg>"
   }
 };
 
@@ -267,15 +730,19 @@ const LESSON = {
   'use strict';
 
   // EDIT LESSON CONTENT in the LESSON object above: dates, dialogue and questions.
-  const pages = ['opening', 'control', ...LESSON.stops.map(stop => stop.id), 'timeline'];
   const yearNow = new Date().getFullYear();
+  const present = LESSON.stops.find(stop => stop.id === 'present');
+  present.year = yearNow; present.date = String(yearNow);
+  LESSON.stops.find(stop => stop.id === 'modern2017').followup = `We have travelled just ${yearNow - 2017} years. The Maya beginnings are much further away.`;
+  const pages = ['opening', 'control', ...LESSON.stops.map(stop => stop.id), 'timeline'];
   const read = key => { try { return localStorage.getItem(key); } catch { return null; } };
   const save = (key, value) => { try { localStorage.setItem(key, value); } catch { /* Browsers may restrict file storage. */ } };
   const state = {
     page: 'opening', sound: false,
     reduced: read('history-motion') === 'true' || window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     showHotspots: false, answer: null,
-    prediction: ['Yes', 'No', 'Not sure'].includes(read('history-viking-prediction')) ? read('history-viking-prediction') : null,
+    predictions: Object.fromEntries(LESSON.stops.filter(stop => stop.prediction).map(stop => { const value = read(stop.prediction.key); return [stop.id, ['Yes', 'No', 'Not sure'].includes(value) ? value : null]; })),
+    stopAnswers: {},
     focusYear: 800, locked: null, preview: null, suppressPreview: false,
     modal: null, travel: null
   };
@@ -294,6 +761,7 @@ const LESSON = {
   const esc = value => String(value).replace(/[&<>"']/g, char => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]));
   const action = (name, text, className = '', attributes = '') => `<button type="button" data-action="${name}" class="${className}" ${attributes}>${text}</button>`;
   const currentStop = () => LESSON.stops.find(stop => stop.id === state.page);
+  const nextStop = stop => LESSON.stops[LESSON.stops.indexOf(stop) + 1];
   const position = year => ((year + 2000) / (yearNow + 2000)) * 100;
   const formatYear = year => year < 0 ? `${Math.abs(year).toLocaleString()} BC` : year < 1000 ? `AD ${year}` : String(year);
   const icon = type => `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">${type === 'sound' ? '<path d="M11 4L5 9H2v6h3l6 5Z"/><path d="M15 8q7 4 0 8M18 4q12 8 0 16"/>' : type === 'book' ? '<path d="M12 5Q5 1 2 5v15q5-3 10 0 5-3 10 0V5q-5-3-10 0Z"/><path d="M12 5v15"/>' : '<circle cx="12" cy="12" r="4"/><path d="M12 1v4m0 14v4M1 12h4m14 0h4M4 4l3 3m10 10 3 3M4 20l3-3M17 7l3-3"/>'}</svg>`;
@@ -378,28 +846,32 @@ const LESSON = {
   function controlRoom() {
     return `<section class="control-page">
       <div class="section-title"><span class="eyebrow">TIME MACHINE / CONTROL ROOM</span><h1>Welcome, <em>historians.</em></h1><p>Our mission: discover where the Maya fit into history.</p></div>
-      <div class="console"><div class="console-side"><span class="eyebrow">DESTINATION SCANNER</span><h3>Scandinavia</h3><p>AD 800 · Viking Age</p><div class="scanner"><i></i><b>✦</b></div><span class="live-dot"></span> SYSTEMS READY</div>
+      <div class="console"><div class="console-side"><span class="eyebrow">DESTINATION SCANNER</span><h3>Journey ready</h3><p>Present day → 2017 → the distant past</p><div class="scanner"><i></i><b>✦</b></div><span class="live-dot"></span> SYSTEMS READY</div>
       <div class="console-main"><span class="eyebrow">YOU ARE HERE</span><div class="year-display">${yearNow}</div><p>Before we travel, remember the number one rule…</p><h2>Do not get lost in history!</h2>
         <div class="quiz"><h3>${esc(LESSON.chronologyQuestion.prompt)}</h3>
           ${LESSON.chronologyQuestion.options.map((option, index) => action('answer', `<b>${'ABC'[index]}</b> ${esc(option)}`, state.answer === index ? 'selected' : '', `data-index="${index}" aria-pressed="${state.answer === index}"`)).join('')}
           <p role="status" class="quiz-feedback" id="quiz-feedback" ${state.answer === null ? 'hidden' : ''}>${state.answer === null ? '' : esc(state.answer === LESSON.chronologyQuestion.correct ? LESSON.chronologyQuestion.success : LESSON.chronologyQuestion.retry)}</p>
         </div>
-        ${action('begin', 'Travel through time <span>→</span>', 'primary')}<small class="skip-note">You can begin the journey at any time.</small>
+        ${action('begin', 'Begin journey <span>→</span>', 'primary')}<small class="skip-note">You can begin the journey at any time.</small>
       </div></div>
     </section>`;
   }
   function historicalStop(stop) {
+    const number = LESSON.stops.indexOf(stop) + 1;
+    const prediction = state.predictions[stop.id];
+    const answer = state.stopAnswers[stop.id];
+    const following = nextStop(stop);
     return `<section class="stop-page">
-      <div class="stop-heading"><div><span class="eyebrow">TIME MACHINE STOP! · ${esc(stop.region)}</span><h1>${esc(stop.title)}</h1><p>${esc(stop.intro)}</p></div><div class="date-badge">${esc(stop.date)}<small>DESTINATION ${stop.id === 'vikings' ? '01' : '02'}</small></div></div>
+      <div class="stop-heading"><div><span class="eyebrow">${stop.id === 'present' ? 'YOU ARE HERE' : 'TIME MACHINE STOP!'} · ${esc(stop.region)}</span><h1>${esc(stop.title)}</h1><p>${esc(stop.intro)}</p></div><div class="date-badge">${esc(stop.date)}<small>STOP ${String(number).padStart(2, '0')} / ${String(LESSON.stops.length).padStart(2, '0')}</small></div></div>
       <div class="interactive-scene ${state.showHotspots ? 'show-hotspots' : ''}">
         ${document.querySelector('#art-' + stop.id).innerHTML}
         <div class="scene-caption"><span class="live-dot"></span> EXPLORE THE SCENE <small>Touch a person or object to discover its story.</small></div>
         ${stop.hotspots.map(hotspot => action('hotspot', `<span>+</span><small>${esc(hotspot.title)}</small>`, 'hotspot', `data-hotspot="${esc(hotspot.id)}" style="left:${hotspot.x}%;top:${hotspot.y}%" aria-label="Discover ${esc(hotspot.title)}" aria-pressed="false"`)).join('')}
         <div id="dialogue-root"></div>
       </div>
-      <div class="stop-bottom"><div class="prediction"><span class="eyebrow">${stop.id === 'vikings' ? 'MAKE A PREDICTION' : 'IMPORTANT DISCOVERY'}</span><h2>${esc(stop.question)}</h2>
-        ${stop.id === 'vikings' ? `<div class="prediction-options">${['Yes', 'No', 'Not sure'].map(answer => action('predict', answer, state.prediction === answer ? 'selected' : '', `data-answer="${answer}" aria-pressed="${state.prediction === answer}"`)).join('')}</div><small id="prediction-status" role="status">${state.prediction ? 'Prediction saved. We’ll check it on the timeline.' : 'Make a guess. We’ll find out together.'}</small>` : '<p>The Maya did not exist at just one moment in history.</p>'}
-      </div><div class="stop-actions">${action('book', `${icon('book')} Book mission`, 'secondary')}${action('continue', `${stop.id === 'vikings' ? 'Travel to the Maya' : 'Reveal the timeline'} <span>→</span>`, 'primary')}</div></div>
+      <div class="stop-bottom"><div class="prediction"><span class="eyebrow">${stop.prediction ? 'MAKE A PREDICTION' : stop.check ? 'CHECK THE ORDER' : stop.id === 'maya' ? 'IMPORTANT DISCOVERY' : 'THINK TOGETHER'}</span><h2>${esc(stop.prediction?.question || stop.check?.question || stop.question)}</h2>
+        ${stop.prediction ? `<div class="prediction-options">${['Yes', 'No', 'Not sure'].map(value => action('predict', value, prediction === value ? 'selected' : '', `data-answer="${value}" aria-pressed="${prediction === value}"`)).join('')}</div><small id="prediction-status" role="status">${prediction ? 'Prediction saved. We’ll check it on the timeline.' : 'Make a guess. We’ll find out together.'}</small>` : stop.check ? `<div class="prediction-options">${stop.check.options.map((option, index) => action('stop-answer', esc(option), answer === index ? 'selected' : '', `data-index="${index}" aria-pressed="${answer === index}"`)).join('')}</div><small id="stop-feedback" role="status">${answer === undefined ? 'Choose an answer, or continue the journey.' : esc(answer === stop.check.correct ? stop.check.success : stop.check.retry)}</small>` : `<p>${esc(stop.followup || (stop.id === 'maya' ? 'The Maya did not exist at just one moment in history.' : 'Discuss your ideas together, then continue.'))}</p>`}
+      </div><div class="stop-actions">${action('book', `${icon('book')} Book mission`, 'secondary')}${action('continue', `${!following ? 'Reveal the timeline' : stop.id === 'greece' ? 'Travel to Mesoamerica' : 'Travel through time'} <span>→</span>`, 'primary')}${following ? `<small class="next-destination">NEXT: ${esc(following.date)} · ${esc(following.shortTitle)}</small>` : ''}</div></div>
     </section>`;
   }
   function renderDialogue() {
@@ -421,14 +893,16 @@ const LESSON = {
   }
   function timelineNote() {
     const year = state.focusYear;
-    const title = year === 800 ? 'While Vikings sailed, Maya cities flourished.' : year === 1485 ? 'When the Tudor period began, Maya communities still lived in Mesoamerica.' : year === -31 ? 'While Romans lived in Europe, Maya communities existed in Mesoamerica.' : 'Different places. Shared time.';
-    return `<span class="note-icon">↔</span><div><h2>${title}</h2><p>${year === 800 && state.prediction ? `Your Viking prediction: “${esc(state.prediction)}”. The answer is YES. ` : ''}The Maya were not simply “before” these periods. Their histories overlapped.</p></div>`;
+    const stop = year === 800 ? LESSON.stops.find(s => s.id === 'vikings') : year === 1485 ? LESSON.stops.find(s => s.id === 'tudors') : year === 31 ? LESSON.stops.find(s => s.id === 'romans') : null;
+    const title = year === 800 ? 'While Vikings sailed, Maya cities flourished.' : year === 1485 ? 'When the Tudor period began, Maya communities still lived in Mesoamerica.' : year === 31 ? 'While Romans lived in Europe, Maya communities existed in Mesoamerica.' : 'Different places. Shared time.';
+    const prediction = stop && state.predictions[stop.id];
+    return `<span class="note-icon">↔</span><div><h2>${title}</h2><p>${prediction ? `Your ${esc(stop.shortTitle)} prediction: “${esc(prediction)}”. The answer is YES. ` : ''}The Maya were not simply “before” these periods. Their histories overlapped.</p></div>`;
   }
   function timeline() {
     return `<section class="timeline-page">
       <div class="section-title"><span class="eyebrow">MISSION DISCOVERY / 03</span><h1>One timeline. <em>Many stories.</em></h1><p>The Maya story stretched across thousands of years.</p></div>
       <div class="timeline-board"><div class="timeline-label"><span>← EARLIEST</span><span>TIME MOVES FORWARD →</span></div>
-        <div class="axis">${[-2000, -1000, 0, 1000, 2000].map(year => `<span style="left:${position(year)}%">${year === 0 ? 'BC / AD' : year < 0 ? `${-year} BC` : year}</span>`).join('')}</div>
+        <div class="axis">${[-2000, -1000, 0, 1000, yearNow].map(year => `<span style="left:${position(year)}%">${year === yearNow ? 'TODAY' : year === 0 ? 'BC / AD' : year < 0 ? `${-year} BC` : year}</span>`).join('')}</div>
         <div class="maya-band"><b>MAYA CIVILIZATION</b><span>c. 2000 BC → living cultures today</span></div>
         <div class="period-rows">${LESSON.periods.map((period, index) => action('period', `<span class="period-title">${esc(period.name)}<small>${esc(period.label)}</small></span><span class="period-track"><b style="left:${position(period.start)}%;width:${Math.max(0.6, position(period.end) - position(period.start))}%"></b></span>`, `period-row ${state.focusYear >= period.start && state.focusYear <= period.end ? 'highlight' : ''}`, `data-index="${index}" aria-pressed="${state.focusYear >= period.start && state.focusYear <= period.end}"`)).join('')}
           <div class="time-line" style="left:calc(210px + (100% - 210px) * ${position(state.focusYear) / 100})"><span>${state.focusYear < 0 ? `${-state.focusYear} BC` : `AD ${state.focusYear}`}</span></div>
@@ -464,35 +938,45 @@ const LESSON = {
     if (animate) {
       const destination = LESSON.stops.find(stop => stop.id === target);
       if (!destination) return;
-      const from = target === 'vikings' ? yearNow : LESSON.stops.find(stop => stop.id === source && stop.id !== target)?.year ?? LESSON.stops[0].year;
+      const destinationIndex = LESSON.stops.indexOf(destination);
+      const from = LESSON.stops.find(stop => stop.id === source && stop.id !== target)?.year ?? LESSON.stops[Math.max(0, destinationIndex - 1)].year;
       startTravel(from, destination.year, target);
     } else { state.page = target; renderPage(); }
   }
 
-  // Six seconds regardless of motion/sound settings; controls never restart the clock.
+  // Six seconds per jump; the final Maya jump adds one second of silent darkness.
+  // Sound and motion controls never restart the clock.
   function startTravel(from, to, target) {
     state.travel = { from, to, target, begin: performance.now() };
+    const finalJump = target === 'maya';
+    const duration = finalJump ? 7000 : 6000;
+    let silence = false;
     main.setAttribute('aria-busy', 'true');
-    main.innerHTML = `<section class="travel ${state.reduced ? 'still' : ''}" aria-label="Travelling through time"><div class="warp" aria-hidden="true">${Array.from({length: 42}, (_, index) => `<i style="--angle:${index * 137.5}deg;--delay:${-(index % 13) / 3}s;--distance:${90 + index % 5 * 50}px"></i>`).join('')}</div><div class="travel-core"><span class="eyebrow">CHRONOMETER ACTIVE</span><h1 id="travel-year" tabindex="-1">${formatYear(from)}</h1><p id="travel-phrase" aria-live="polite">Hold on!</p><div class="travel-meter"><b id="travel-progress" style="width:0%"></b></div><small>DESTINATION LOCKED · ${formatYear(to)}</small></div></section>`;
+    main.innerHTML = `<section class="travel ${state.reduced ? 'still' : ''} ${finalJump ? 'maya-jump' : ''}" aria-label="Travelling through time"><div class="warp" aria-hidden="true">${Array.from({length: 42}, (_, index) => `<i style="--angle:${index * 137.5}deg;--delay:${-(index % 13) / 3}s;--distance:${90 + index % 5 * 50}px"></i>`).join('')}</div><div class="travel-core"><span class="eyebrow">CHRONOMETER ACTIVE</span><h1 id="travel-year" tabindex="-1">${formatYear(from)}</h1><p id="travel-phrase" aria-live="polite">Hold on!</p><div class="travel-meter"><b id="travel-progress" style="width:0%"></b></div><small>DESTINATION LOCKED · ${formatYear(to)}</small></div></section>`;
     main.querySelector('h1').focus({preventScroll:true});
     playSound('travel');
     const phrases = ['Hold on!', 'Travelling backwards through history…', 'Chronometer calculating…', 'Destination approaching…', 'Prepare to stop!'];
     let phraseIndex = 0;
     travelTimer = window.setInterval(() => {
       if (!state.travel) return;
-      const progress = Math.min((performance.now() - state.travel.begin) / 6000, 1);
+      const elapsed = performance.now() - state.travel.begin;
+      const progress = Math.min(elapsed / 6000, 1);
       let year = Math.round(from + (to - from) * progress);
       if (year === 0) year = -1; // There is no year zero in BC/AD notation.
       document.querySelector('#travel-year').textContent = formatYear(year);
       document.querySelector('#travel-progress').style.width = `${progress * 100}%`;
       const nextIndex = Math.min(4, Math.floor(progress * 5));
       if (nextIndex !== phraseIndex) { document.querySelector('#travel-phrase').textContent = phrases[nextIndex]; phraseIndex = nextIndex; }
-      if (progress === 1) {
+      if (finalJump && progress === 1 && !silence) {
+        silence = true; stopSound();
+        main.querySelector('.travel').classList.add('final-silence');
+      }
+      if (elapsed >= duration) {
         clearInterval(travelTimer); travelTimer = null; state.travel = null;
         main.removeAttribute('aria-busy'); stopSound(); playSound('arrival');
         state.page = target; renderPage();
         if (!state.reduced) {
-          arrivalRoot.innerHTML = `<div class="arrival" role="status"><span>TIME MACHINE STOP!</span><b>${esc(currentStop().date)}</b></div>`;
+          arrivalRoot.innerHTML = `<div class="arrival" role="status"><span>${finalJump ? 'DESTINATION FOUND · MESOAMERICA' : 'TIME MACHINE STOP!'}</span><b>${esc(currentStop().date)}</b></div>`;
           arrivalTimer = window.setTimeout(() => arrivalRoot.replaceChildren(), 1700);
         }
       }
@@ -501,22 +985,21 @@ const LESSON = {
 
   function teacherPanel() {
     return `<span class="eyebrow">YOU’RE IN CONTROL</span><h2>Teacher controls</h2>
-      <label>Jump to a destination<select id="destination-select">${pages.map(page => `<option value="${page}" ${page === state.page ? 'selected' : ''}>${page === 'opening' ? 'Opening' : page === 'control' ? 'Control room' : page === 'timeline' ? 'Overlapping timeline' : `${esc(LESSON.stops.find(stop => stop.id === page).date)} · ${page === 'maya' ? 'Early Maya' : 'Vikings'}`}</option>`).join('')}</select></label>
+      <label>Jump to a destination<select id="destination-select">${pages.map(page => `<option value="${page}" ${page === state.page ? 'selected' : ''}>${page === 'opening' ? 'Opening' : page === 'control' ? 'Control room' : page === 'timeline' ? 'Overlapping timeline' : `${esc(LESSON.stops.find(stop => stop.id === page).date)} · ${esc(LESSON.stops.find(stop => stop.id === page).shortTitle)}`}</option>`).join('')}</select></label>
       <div class="teacher-grid">
         ${action('previous', '← Previous')}${action('next', 'Next →')}
         ${action('sound', `Sound ${state.sound ? 'off' : 'on'}`)}${action('motion', `Reduced motion ${state.reduced ? 'off' : 'on'}`)}
         ${action('hotspots', `${state.showHotspots ? 'Hide' : 'Show'} hotspots`)}${action('book', 'Book mission')}
         ${action('replay', 'Replay travel')}${action('fullscreen', 'Toggle fullscreen')}
         ${action('restart', 'Restart journey')}${action('timeline', 'Explore timeline')}
-      </div><p class="small-note">Prototype route: present → Vikings → early Maya → timeline. No quiz is required to continue.</p>`;
+      </div><p class="small-note">Nine stops: present → 2017 → WWII → Victorians → Tudors → Vikings → Romans → Greeks → early Maya. No quiz is required to continue.</p>`;
   }
   function bookPanel() {
     const stop = currentStop() || LESSON.stops[0];
-    const maya = stop.id === 'maya';
     return `<span class="eyebrow">PENCILS READY / BOOK MISSION</span><h2>Your own piece of history</h2><p>Write the date and period. Draw one simple symbol.</p>
-      <div class="book-card"><b>${esc(stop.date)}</b><h3>${maya ? 'Early Maya civilization' : 'Viking Age'}</h3>
-        <svg viewBox="0 0 200 120" role="img" aria-label="${maya ? 'Simple maize cob to sketch' : 'Simple longship to sketch'}"><g fill="none" stroke="currentColor" stroke-width="4">${maya ? '<ellipse cx="100" cy="55" rx="18" ry="42"/><path d="M100 110Q45 80 72 52L100 95Q150 70 131 52L100 110M92 25v60m16-60v60M83 40h34M82 55h36M85 70h30"/>' : '<path d="M20 80Q100 130 180 80L165 105H35Z M100 85V12L155 70H100M20 80L13 60M180 80l7-20M20 115q15-7 30 0t30 0t30 0t30 0t30 0"/>'}</g></svg>
-        <small>${maya ? 'A maize cob' : 'A longship'} · keep your drawing simple</small>
+      <div class="book-card"><b>${esc(stop.date)}</b><h3>${esc(stop.book.period)}</h3>
+        ${LESSON.bookSymbols[stop.book.symbol]}
+        <small>${esc(stop.book.label)} · keep your drawing simple</small>
       </div><p>Put the earliest dates on the left. Leave space for a long Maya band!</p>`;
   }
   function openModal(kind) {
@@ -564,31 +1047,38 @@ const LESSON = {
         feedback.hidden = false; feedback.textContent = state.answer === LESSON.chronologyQuestion.correct ? LESSON.chronologyQuestion.success : LESSON.chronologyQuestion.retry;
         playSound('beep'); break;
       }
-      case 'begin': go('vikings', true); break;
-      case 'continue': state.page === 'vikings' ? go('maya', true) : go('timeline'); break;
+      case 'begin': go(LESSON.stops[0].id); break;
+      case 'continue': { const following = nextStop(currentStop()); following ? go(following.id, true) : go('timeline'); break; }
       case 'hotspot': state.locked = currentStop().hotspots.find(h => h.id === button.dataset.hotspot); lastHotspot = button; renderDialogue(); playSound('beep'); break;
       case 'close-dialogue': closeDialogue(); break;
       case 'predict': {
-        state.prediction = button.dataset.answer; save('history-viking-prediction', state.prediction);
-        document.querySelectorAll('[data-action="predict"]').forEach(option => { const selected = option.dataset.answer === state.prediction; option.classList.toggle('selected', selected); option.setAttribute('aria-pressed', String(selected)); });
+        const stop = currentStop(); const value = button.dataset.answer;
+        state.predictions[stop.id] = value; save(stop.prediction.key, value);
+        document.querySelectorAll('[data-action="predict"]').forEach(option => { const selected = option.dataset.answer === value; option.classList.toggle('selected', selected); option.setAttribute('aria-pressed', String(selected)); });
         document.querySelector('#prediction-status').textContent = 'Prediction saved. We’ll check it on the timeline.'; break;
+      }
+      case 'stop-answer': {
+        const stop = currentStop(); const answer = Number(button.dataset.index); state.stopAnswers[stop.id] = answer;
+        document.querySelectorAll('[data-action="stop-answer"]').forEach(option => { const selected = Number(option.dataset.index) === answer; option.classList.toggle('selected', selected); option.setAttribute('aria-pressed', String(selected)); });
+        document.querySelector('#stop-feedback').textContent = answer === stop.check.correct ? stop.check.success : stop.check.retry;
+        playSound('beep'); break;
       }
       case 'book': openModal('book'); break;
       case 'previous': go(pages[Math.max(0, pages.indexOf(state.page) - 1)]); break;
       case 'next': go(pages[Math.min(pages.length - 1, pages.indexOf(state.page) + 1)]); break;
       case 'hotspots': state.showHotspots = !state.showHotspots; document.querySelector('.interactive-scene')?.classList.toggle('show-hotspots', state.showHotspots); closeModal(); break;
-      case 'replay': go(currentStop()?.id || 'vikings', true); break;
+      case 'replay': { const target = state.travel?.target || (currentStop()?.id === 'present' ? LESSON.stops[1].id : currentStop()?.id || LESSON.stops[1].id); go(target, true); break; }
       case 'fullscreen': {
         const promise = document.fullscreenElement ? document.exitFullscreen?.() : document.documentElement.requestFullscreen?.();
         if (promise) promise.catch(() => { const note = modalRoot.querySelector('.small-note'); if (note) note.textContent = 'Fullscreen is unavailable in this browser. Use its fullscreen menu instead.'; });
         break;
       }
-      case 'restart': state.answer = null; state.focusYear = 800; go('opening'); break;
+      case 'restart': state.answer = null; state.stopAnswers = {}; state.focusYear = 800; go('opening'); break;
       case 'timeline': go('timeline'); break;
       case 'history': openModal('history'); break;
       case 'period': {
         const period = LESSON.periods[Number(button.dataset.index)];
-        state.focusYear = period.name === 'Roman world' ? -31 : period.name === 'Viking Age' ? 800 : period.start;
+        state.focusYear = period.name === 'Roman world' ? 31 : period.name === 'Viking Age' ? 800 : period.start;
         document.querySelectorAll('[data-action="period"]').forEach((row, index) => { const item = LESSON.periods[index]; const active = state.focusYear >= item.start && state.focusYear <= item.end; row.classList.toggle('highlight', active); row.setAttribute('aria-pressed', String(active)); });
         const line = document.querySelector('.time-line'); line.style.left = `calc(210px + (100% - 210px) * ${position(state.focusYear) / 100})`; line.firstElementChild.textContent = state.focusYear < 0 ? `${-state.focusYear} BC` : `AD ${state.focusYear}`;
         document.querySelector('#timeline-note').innerHTML = timelineNote(); break;
