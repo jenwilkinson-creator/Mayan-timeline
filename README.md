@@ -1,43 +1,53 @@
 # The History Time Machine
 
-A teacher-led Year 5 chronology experience. Stage-one prototype built with React 19, TypeScript and Vite. No login, database or pupil information. Original SVG scene artwork, locally hosted open-license fonts and Web Audio effects; no runtime asset services.
+An immersive, teacher-led Year 5 chronology lesson. **The entire application is `index.html`.** It contains plain JavaScript, CSS, original SVG artwork, embedded fonts and synthesized sound. There is no React, TypeScript, package installation or compilation.
 
-## Develop and build
+## Use it
 
-Use the existing checkout at `/workspace/Mayan-timeline`; cloud tasks are already isolated and do not need a worktree.
+1. Download `index.html` and save it to your computer. When downloading from GitHub, use **Download raw file**, rather than saving the GitHub page.
+2. Double-click the file or open it with a modern browser such as Chrome, Edge, Firefox or Safari.
+3. Choose **Enter the time machine**, then Immersive or Quiet mode.
 
-```sh
-npm ci --cache /workspace/.npm-cache --no-audit --no-fund
-npm run dev -- --port 5173
-npm run build
-npm run preview -- --port 4173
-```
+The lesson needs no internet connection. Share or upload just this one file. For a static website, place `index.html` in the site's root or any subfolder; no asset paths or build settings are needed. This repository also works with GitHub Pages' **Deploy from a branch** option (`main`, `/ (root)`) once Pages is enabled in repository settings.
 
-Node 24 and npm 11 were used for validation. Deploy `dist/` to a static host at its root. For a subdirectory deployment, set Vite's `base` and adjust the font URLs in `src/styles.css` to the deployment path. No environment variables or secrets are required. Installation uses registry.npmjs.org; runtime assets are local.
+School browser policies can restrict local files or fullscreen. If local files are restricted, serve the same HTML on a static host. Sound starts only after a click. Storage restrictions do not stop the lesson: predictions and preferences fall back to the current session when persistent storage is unavailable. No pupil information is collected.
 
 ## Prototype route
 
 Opening → sound choice → control room and optional chronology question → six-second backward travel → AD 800 Viking harbour → six-second backward travel → c. 2000 BC early Maya farming settlement → overlapping timeline.
 
-Click scene objects to lock their information card; hover or focus previews it. Escape dismisses cards and dialogs. Show Hotspots reveals targets. Teacher Controls supports jumping, previous/next, replay, sound, reduced motion, Book Mission, restart and fullscreen. Every activity can be bypassed. Sound begins only after a user action. Reduced motion keeps the travel duration but removes rushing streaks, vibration and arrival animation.
+Hover or keyboard-focus an object to preview its story; click to lock the card. Click Close or press Escape to dismiss it. Preview cards allow clicks through to the object beneath. Teacher Controls supports previous/next, destination jumps, replay, sound, reduced motion, hotspot visibility, Book Mission, restart and fullscreen. Quizzes never block progress.
 
-Only sound/motion preferences and the class's Viking prediction are saved locally. Restart returns to the opening and resets the chronology answer; preferences and the saved prediction are retained. Maya timeline details explain the decline of some cities without implying that Maya people vanished.
+Reduced motion removes rushing streaks, vibration and arrival animation while preserving six seconds of travel. Sound and motion preferences and the class Viking prediction can be stored locally; restart resets the chronology answer and timeline selection, retaining the class prediction and preferences.
 
-## File/component plan
+## Edit the lesson
 
-- `src/history.ts`: editable destinations, dates, dialogue, hotspot positions, chronology question, comparison periods and Maya milestones.
-- `src/App.tsx`: journey state, Opening/TimeMachine control room, HistoricalStop/InteractiveScene, discovery cards, sound controls, teacher controls and Book Mission.
-- `src/components/TravelSequence.tsx`: six-second chronometer, streak tunnel and travel messaging.
-- `src/components/SceneArtwork.tsx`: original Viking and early Maya SVG environments.
-- `src/components/Timeline.tsx`: linear earliest-left comparison, animated Maya band, predictions and Maya-through-time detail.
-- `src/sound.ts`: synthesized button, travel and arrival effects with an explicit stop function.
-- `src/styles.css`: responsive museum-style interface and reduced-motion handling.
-- `public/fonts/`: locally hosted DM Sans and Space Grotesk with their licenses.
+Open `index.html` in a text editor. Search for **`const LESSON =`** inside the script:
 
-Next stage: add the other historical pit stops to the data and scene renderer, then the full Maya time-lapse, draggable timeline challenge, five-question final check and dedicated mission-complete screen. Do not replace the scene-based journey with a long scrolling lesson.
+- `stops`: dates, titles, short dialogue and hotspot positions (percentages).
+- `periods`: comparison periods and timeline ranges.
+- `milestones`: Maya-through-time content.
+- `chronologyQuestion`: prompt, answers and feedback.
+
+The `<style>` section controls the design. `<template id="art-vikings">` and `<template id="art-maya">` hold the SVG illustrations. The plain JavaScript beneath the lesson data handles screens, sound, travel, cards, timeline and teacher dialogs. Save the file and refresh your browser; there is nothing to compile.
+
+The fonts are embedded as data URLs. Their SIL Open Font License notices are included at the bottom of the HTML. All scene artwork is original and sound uses the Web Audio API.
 
 ## Validation
 
-`npm run build` checks TypeScript and produces the static site. Headless Chromium exercised the complete route, correct/incorrect chronology feedback, six-second travel duration, hotspot click locking and Escape, Book Mission, prediction persistence, reduced motion, Maya arrival, Viking/Tudor overlap, continuing Maya cultures, sound toggle and mobile horizontal overflow. No browser errors occurred. Teacher dialogs trap focus and return it on close. Real classroom speakers, whiteboard hardware and fullscreen permissions still depend on the deployment browser.
+Browser checks cover the journey, six-second transitions, correct/incorrect quiz feedback, card preview and locking, Close/Escape, Book Mission, predictions and persistence, Roman/Viking/Tudor overlap, continued Maya cultures, sound controls, reduced motion, teacher navigation, dialog focus trapping/return and responsive layouts. The opening, control room, Viking/Maya scenes and timeline fit 1440×1000, 1366×768 and 1920×1080 classroom displays without scrolling; mobile screens allow vertical space while avoiding horizontal overflow.
 
-Periods cover broad spans; single stop dates are markers, not the duration of a civilization. The broad Greek range and Roman comparison are teaching simplifications. The BC/AD boundary has no year zero.
+The standalone document was exercised completely offline with no network requests, including when storage was unavailable. Static-server tests checked persistence. The cloud test browser's administrator policy blocks `file://` navigation, so direct double-click launching could not be verified in that browser; the file has no imports, fetched resources or server-dependent code.
+
+For optional cloud testing only, use the existing checkout (cloud tasks are already isolated; no worktree is needed):
+
+```sh
+cd /workspace/Mayan-timeline
+python3 -m http.server 8080 --bind 127.0.0.1
+```
+
+This serves the existing HTML without compilation. It is not required for classroom use.
+
+## Future lesson stages
+
+This remains the first-stage prototype. Additional historical stops, a visual Maya time-lapse, draggable timeline challenge, five-question final check and dedicated mission-complete screen are future work. The earliest dates stay on the left; stop dates are markers, not the entire duration of a civilization. The Maya story continues to the present.
