@@ -1,0 +1,92 @@
+[
+  {
+    "id": "maya-1100",
+    "number": 1,
+    "name": "01-1100-bc-early-settlement",
+    "alt": "Families, thatched homes, gathering, maize and river fishing in an early Mesoamerican settlement",
+    "file": "01-1100-bc-early-settlement.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-800bc",
+    "number": 2,
+    "name": "02-800-bc-farming-trade",
+    "alt": "Maize farmer, beans and squash, pottery trading and established village homes",
+    "file": "02-800-bc-farming-trade.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-700",
+    "number": 3,
+    "name": "03-700-bc-early-writing",
+    "alt": "Craftsperson painting sign-like motifs on a clay pot with an apprentice and carved stone nearby",
+    "file": "03-700-bc-early-writing.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-400",
+    "number": 4,
+    "name": "04-400-bc-calendars-astronomy",
+    "alt": "Observers, an imagined carved time marker, the Sun, crops and a modest ceremonial building",
+    "file": "04-400-bc-calendars-astronomy.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-300",
+    "number": 5,
+    "name": "05-300-bc-rulers-society",
+    "alt": "Potter, maize farming family, traders, adviser and ruler in a growing public plaza",
+    "file": "05-300-bc-rulers-society.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-100",
+    "number": 6,
+    "name": "06-100-bc-monumental-building",
+    "alt": "Builders with stone and wooden tools working on a broad early stepped monument",
+    "file": "06-100-bc-monumental-building.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-tikal",
+    "number": 7,
+    "name": "07-ad-450-tikal",
+    "alt": "A thriving imagined Early Classic Tikal plaza with temples, a scribe, traders, families and a city official",
+    "file": "07-ad-450-tikal.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-pakal",
+    "number": 8,
+    "name": "08-ad-683-palenque-pakal",
+    "alt": "Palenque's Temple of the Inscriptions, carved writing, attendants and palace in a rainforest setting",
+    "file": "08-ad-683-palenque-pakal.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-800ad",
+    "number": 9,
+    "name": "09-ad-800-changing-cities",
+    "alt": "A quieter southern city with vegetation on buildings, a moving family, traders and inhabited homes",
+    "file": "09-ad-800-changing-cities.webp",
+    "width": 1672,
+    "height": 941
+  },
+  {
+    "id": "maya-contact",
+    "number": 10,
+    "name": "10-ad-1502-european-contact",
+    "alt": "Maya traders and goods in a large canoe, observers on a tropical shore and a European ship offshore",
+    "file": "10-ad-1502-european-contact.webp",
+    "width": 1672,
+    "height": 941
+  }
+]
